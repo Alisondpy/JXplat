@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+${(widget.get("widgets/meta.html"))!}
+<link rel="stylesheet" href="//css/conf/live-show.css" type="text/css" charset="utf-8">
+<!-- <link rel="stylesheet" type="text/css" href="${resUrl!}/css/video.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="${resUrl!}/css2/layer.css"> -->
+ <!--#include file="./common/meta.html"-->
+<!--#include file="./common/css.html"-->
+<title>直播详情页</title>
+</head>
+    <!--#include file="./common/header.html"-->
+<body class="z-page20">
+	 <!-- header -->
+	<!-- main -->
+	<!-- <div class="video_top">
+		<div class="video_top_blk player-wrap">
+			<iframe id="liveIframe" src="/course/goto_live.htm?id=${(courseItem.id)!}"></iframe>
+		</div>
+	</div> -->
+
+	<div class="body_auto cl">
+
+		<div class="video_btm">
+			<div class="live_btm_l">
+				<ul class="video_btm_nav" id="tags">
+					<li class="current teacher"><a href="#tagContent0">课程详情</a></li>
+<!-- 					<li><a href="#tagContent1">问答</a></li> -->
+				</ul>
+				<div id="tagContent">
+					<div class="live_btm_l_con live_con_teacher fl" id="tagContent0" >
+						${(courseItem.detail)!}
+					</div>
+					<div class="live_btm_l_con live_con_question fl" id="tagContent1" style="display: none;">
+					
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- footer -->
+	<!-- ${(widget.get("widgets/footer.html"))!}
+	${(widget.get("widgets/js.html"))!} -->
+	 <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+	 <script type="text/javascript">
+    require(['conf/index'], function() {
+
+    });
+    </script>
+</body>
+</html>

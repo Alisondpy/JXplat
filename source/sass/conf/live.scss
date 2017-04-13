@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+.mod-live{
+	width:1200px;
+	margin:0 auto;
+	.live_top{
+	    width: 1200px;
+	    margin: 50px auto 20px;
+	    background-color: #f6f6f6;
+	    -webkit-box-shadow: #CCC 0px 0px 3px 0px;
+	    overflow: hidden;
+	}
+	.live_top_l{
+		width:385px;
+		height:280px;
+		text-align:center;
+		line-height:280px;
+		overflow:hidden;
+	    margin: 68px 90px 0 55px;
+	    float:left;
+		img{
+			height:100%;
+		}
+	}
+
+	.live_top_r{
+	    width: 670px;
+	    margin: 36px 0 70px;
+	    float: left;
+	    h1{
+	    	font-size: 24px;
+		    color: #fe5654;
+		    font-weight: normal;
+	    }
+	    .col{
+		    font-size: 18px;
+	    	margin-top: 20px;
+	    	.col1,.col2{
+	    		display:inline-block;
+	    		em{
+	    			font-style:normal;
+	    		}
+	    	}
+	    }
+	    .live_top_btn{
+		    font-size: 18px;
+		    color: #fff;
+		    background-color: #fe5654;
+		    width: 170px;
+		    height:60px;
+		    line-height:60px;
+		    border-radius:50px;
+		    display: block;
+		    text-align: center;
+		    position: relative;
+		    left: 230px;
+		    bottom: 65px;
+		    cursor:pointer;
+		    text-decoration: none;
+		    &.hasReport{
+		    }
+		    &.goToReport{
+		    	color:#fff;
+		    }
+		    &.enterStudy{
+		    	color:#fff;
+		    }
+		    &.hasReport{
+		    	background:#ff9392;
+		    	color:#fff;
+		    }
+	    }
+	}
+
+	.mod-live-detail{
+		padding:20px;
+		overflow:hidden;
+		h3{
+			font-size:18px;
+			color:#333;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>直播课</title>
+ <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+<link rel="stylesheet" href="/css/conf/live.css" type="text/css" charset="utf-8">
+<script type="text/javascript">
+	 
+</script>
+</head>
+<body >
+	 <!-- header -->
+    <!--#include file="./common/header.html"-->
+	<div class="mod-live">
+
+		<div class="live_top clearfix">
+			<div class="live_top_l">
+				<img data-src ="http://n03.wbc.zhongzhihui.com/data/client/other/0/2016/12/2016-12-13/28ae13b4966f4b2183ed9836475d9c0f.jpg" class="jImg">
+			</div>
+			<div class="live_top_r">
+					<h1>《开课啦》之聊聊面试那些事儿-如何应对HR的提问（一）</h1>
+				<div class="live_top_con">
+					<div class="col">
+						课程简介： 
+						 老徐聊聊面试那些事儿，如何高效应对HR的提问。
+					</div>
+					<div class="col">
+						<div class="col1">讲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;师：</div>
+						<div class="col2">杭州市电子商务公共服务中心</div>
+					</div>
+					<div class="col">
+						<div class="col1">评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：</div> 
+						<div class="col2"><em>5</em>分（<em>0</em>份评价）</div>
+					</div>
+					<div class="col">
+						<div class="col1">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：</div> 
+						<div class="col2">12月14日 18:00 - 12月14日 18:20</div>
+					</div>
+					<div class="col">
+						<div class="col1">报名人数：</div> 
+						<div class="col2"><em>3人</em></div>
+					</div>
+					<div class="col">
+						<div class="col1">学习人数：</div> 
+						<div class="col2"><em>4人</em></div>
+					</div>
+					<div class="col">
+						<div class="col1">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：</div> 
+						<div class="col2"><em>20分钟</em></div>
+					</div>
+		            
+						<!-- <#if (indexOperation.code)! == "ended">
+		             		<#if courseItem.doReplay> -->
+		             			<a href="javascript:;" class="live_top_btn">观看回放</a>
+		             			<a id="${(indexOperation.code)!}" class="live_top_btn" style="color:#fff; background-color:#ccc;">已结束<!-- ${(indexOperation.title)!} --></a>
+		             	<!-- 	<#else>	
+								
+							</#if>	
+						<#elseif (indexOperation.code)! == "hasJoined"> -->
+							<!-- 已报名  -->
+							<a id="${(indexOperation.code)!}"  class="live_top_btn hasReport"><!-- ${(indexOperation.title)!} -->已报名</a>
+						<!-- <#elseif (indexOperation.code)! == "gotoLive"> -->
+							<!-- 进入学习  -->
+							<a id="${(indexOperation.code)!}"  class="live_top_btn enterStudy"><!-- ${(indexOperation.title)!} -->进入学习</a>
+						<!-- <#else> -->
+							<!-- 我要报名 -->
+							<a id="${(indexOperation.code)!}"  class="live_top_btn goToReport" ><!-- ${(indexOperation.title)!} -->我要报名</a>
+						<!-- </#if> 	 -->
+				</div>
+			</div>
+		</div>
+
+		<div class="mod-live-detail">
+			<h3>课程详情</h3>
+			<div class="live-detail-wrap">
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	 <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+   		 require(['conf/live'], function() {
+    });
+    </script>
+</body>
+</html>

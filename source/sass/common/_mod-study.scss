@@ -1,0 +1,66 @@
+/*线上学习样式*/
+.mod-course{
+				background:#fff;
+				padding:20px 20px 0 0;
+				margin-bottom:40px;
+				li{
+					position:relative;
+					float:left;
+					width:160px;
+					height:139px;
+					overflow:hidden;
+					margin-left:20px;
+					margin-bottom:15px;
+					.mod-video{
+						&:hover{
+							.play-icon{display:block;}
+						}
+					}
+					img{
+						width:160px;
+						height:92px;
+					}
+					h2{
+						font-size:14px;
+						font-weight:normal;
+						color:#333;
+						line-height:24px;
+						overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: nowrap;
+					    &:hover{
+					    	text-overflow: ellipsis;
+					    	white-space: normal;
+					    	color:#fe5654;
+					    }
+					}
+					.play-icon{
+						position:absolute;
+						width:48px;
+						height:48px;
+						background:rgba(0,0,0,.32);
+						border-radius:50%;
+						left:50%;
+						margin-left:-24px;
+						top:20px;
+						text-align:center;
+						line-height:48px;
+						display:none;
+						i{
+							color:#fff;	
+							font-size:40px;
+						}
+					}
+					.course-info{
+						span{
+							color:#ff5454;
+							i{
+								margin-right:5px;
+							}
+						}
+						span.f-l{
+							color:#838383;
+						}
+					}
+				}
+			}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>重设密码</title>
+    <!--#include file="./common/meta.html"-->
+    <link rel="stylesheet" href="/css/conf/reset-pwd.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+        $PAGE_DATA['loginSrc']="//s1.zzhstatic.com/JXplat/dist/html/login.html";
+        $PAGE_DATA['registerSrc']="//s1.zzhstatic.com/JXplat/dist/html/register.html";
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    
+    <div class="mod-form clearfix">
+        <form id="jsRightSignin" class="right-signin common f-r">
+            <ul class="ulform">
+                <li class="item">
+                   <i class="icon iyoyo icon-phone-1"></i>
+                    <input class="ui-input" name="mobile" autocomplete="off" type="text" placeholder="手机号" />
+                </li>
+                <li class="item">
+                    <i class="icon iyoyo icon-shield"></i>
+                    <input id="jDynamic" class="ui-input jDynamic" name="vierfyCode" type="text" autocomplete="off" placeholder="手机动态码"/>
+                    <input id="jsVerifyCode" type="button" class="jsVerifyCode ui-btn ui-btn-danger ui-btn-disable" value="获取动态码" />
+                </li>
+                <li class="item">
+                   <i class="icon iyoyo icon-mima"></i>
+                    <input id="password" class="ui-input" name="password" type="password" autocomplete="off" placeholder="新密码" />
+                </li>
+               
+                <li class="item subbtn">
+                    <a href="javascript:;" class="submit ui-btn ui-btn-danger jSubBtn">提交</a>
+                </li>
+                
+            </ul>
+        </form>
+    </div>
+
+    <!--#include file="./common/js.html"-->
+   <script type="text/javascript">
+    require(['conf/reset-pwd'], function() {});
+    </script>
+</body>
+
+</html>

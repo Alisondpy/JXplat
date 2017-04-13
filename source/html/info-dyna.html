@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>资讯动态</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/info.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+        // 登录页面的路径
+        $PAGE_DATA['applyUrl']=""
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="wrap clearfix">
+        <div class="mod-container f-l">
+            <div class="info-show clearfix">
+                <div class="f-l img-wrap">
+                    <a href="javascript:;"><img src="" data-src="/images/info-show.jpg" class="jImg"/></a>
+                    <p>联合国赴非洲支援教育事业</p>
+                </div>
+                <div class="f-r info-title">
+                    <p><span>黄老五董事长：致全国实体企业家的一封信</span></p>
+                    <p><span>上海佳话年利润缩水谁来填花王的坑</span></p>
+                </div>
+            </div>
+
+            <div class="mod-sub-info clearfix">
+                <ul class="f-l clearfix">
+                    <li class="active"><a href="javascript:;">最新</a></li>
+                    <li><a href="javascript:;">农村电商</a></li>
+                    <li><a href="javascript:;">县域电商</a></li>
+                    <li><a href="javascript:;">电商扶贫</a></li>
+                    <li><a href="javascript:;">跨境电商</a></li>
+                    <li><a href="javascript:;">数据方向</a></li>
+                    <li><a href="javascript:;">人物故事</a></li>
+                </ul>
+               <div class="search f-r" id="jTopSearch">
+                    <input class="txt" id="topSearchBar" node-type="ipt" type="text" data-id="name" value="" placeholder="搜索" />
+                    <button node-type="btn" class="iyoyo icon-search" id="jSearch"></button>
+                </div>
+            </div>
+
+            <div class="info-list">
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="info-title">王府井2016净利降13.17%去百货化能走多远</a>
+                        <div class="clearfix">
+                            <a href="javascript:;" class="img-wrap"><img  data-src="/images/default-img.jpg" class="jImg"/></a>
+                            <div class="f-r mod-info-detail">
+                                <p>
+                                当李克强与新西兰总理英格利希乘车缓缓驶入奥克兰郊区一片白色厂房的时候，厂房门口两种颜色的旗帜正在迎风飘扬。一面黑色的旗帜写着“FISHER & PAYKEL(斐雪派克)”，这是新西兰本土最大的家电品牌，另一面蓝色的旗帜写着“Haier(海尔)”，这是中国最大的白色家电品牌。
+                                </p>
+                                <span>2017年12月30日</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="info-title">王府井2016净利降13.17%去百货化能走多远</a>
+                        <div class="clearfix">
+                            <a href="javascript:;" class="img-wrap"><img  data-src="/images/default-img.jpg" class="jImg"/></a>
+                            <div class="f-r mod-info-detail">
+                                <p>
+                                当李克强与新西兰总理英格利希乘车缓缓驶入奥克兰郊区一片白色厂房的时候，厂房门口两种颜色的旗帜正在迎风飘扬。一面黑色的旗帜写着“FISHER & PAYKEL(斐雪派克)”，这是新西兰本土最大的家电品牌，另一面蓝色的旗帜写着“Haier(海尔)”，这是中国最大的白色家电品牌。
+                                </p>
+                                <span>2017年12月30日</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+                <!--分页begin-->
+                <div class="mod-page clearfix">
+                    <div class="f-r" id="jPagination"></div>
+                </div>
+                <!--分页end-->
+        </div>
+        <!-- 右侧广告栏 -->
+        <div class="mod-right f-r">
+        <!-- 国家政策 -->
+            <div class="mod-policy">
+                <h2 class="mod-common-title">国家政策</h2>
+                 <!--#include file="./common/mod-policy.html"-->
+            </div>
+            <!-- 地方政策 -->
+            <div class="mod-policy">
+                <h2 class="mod-common-title">地方政策</h2>
+                 <!--#include file="./common/mod-policy.html"-->
+            </div>
+
+            <!-- 双创活动 -->
+            <div class="mod-activity mt-40">
+                <h2 class="mod-common-title">双创活动</h2>
+            <!--#include file="./common/mod-activity.html"-->
+            </div>
+            <!-- 线上学习 -->
+            <div class="mod-course">
+                <h2 class="mod-common-title ml-20">线上学习</h2>
+                <!--#include file="./common/mod-study.html"-->
+            </div>
+            <!-- 园区组织 -->
+            <div class="mod-organize">
+                <h2 class="mod-common-title ml-20">园区组织</h2>
+                <!--#include file="./common/mod-orgnize.html"-->
+            </div>
+        </div>
+    </div>
+
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/info'], function() {
+    });
+    </script>
+<!-- 资讯列表模板 -->
+    <script id="jWrap" type="text/html">
+    {{each resultList as value i}}
+    <li>
+         <a href="javascript:;" class="info-title">{value.title}}</a>
+            <div class="clearfix">
+                 <a href="javascript:;" class="img-wrap"><img src="//s1.zhongzhihui.com/lib/assets/images/s.gif" data-src="{{value.resourceUrl}}" class="jImg"/></a>
+                <div class="f-r mod-info-detail">
+                    <p>{value.text}</p>
+                    <span>{value.time}</span>
+                </div>
+            </div>
+    </li>
+    {{/each}}
+    </script>
+    <!--#include file="./common/tj.html"-->
+    <!--#include file="./common/statistics.html"-->
+</body>
+
+</html>

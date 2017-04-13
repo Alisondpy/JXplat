@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>双创活动</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/activity.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+        // 登录页面的路径
+        $PAGE_DATA['loadActivity'] = "//s1.zzhstatic.com/JXplat/source/api/news/hot-news.json"
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="wrap clearfix">
+        <div class="mod-container f-l">
+            <div class="mod-sub-info clearfix">
+                <div class="mod-area f-l" id="jNav">
+                    <div class="area-selected">
+                        <span>
+                            <i class="iyoyo icon-location"></i>地区
+                        </span>
+                        <a href="javascript:;" class="jSelected" >全部</a>
+                        <i class="iyoyo icon-down-sign"></i>
+                    </div>
+                    <div class="area-detail">
+                        <a href="javascript:;" >全部</a>
+                        <a href="javascript:;" value="0">上饶</a>
+                        <a href="javascript:;" value="1">景德镇</a>
+                        <a href="javascript:;">婺源</a>
+                        <a href="javascript:;">井冈山</a>
+                        <a href="javascript:;">萍乡</a>
+                        <a href="javascript:;">新余</a>
+                        <a href="javascript:;">宜春</a>
+                        <a href="javascript:;">吉安</a>
+                        <a href="javascript:;">赣州</a>
+                        <a href="javascript:;">宜春</a>
+                    </div>
+                </div>
+               <div class="search f-r" id="jTopSearch">
+                    <input class="txt" id="_topSearchBar" node-type="ipt" type="text" data-id="name" value="" placeholder="请输入搜索内容..." />
+                    <button node-type="btn" class="iyoyo icon-search"></button>
+                </div>
+            </div>
+
+            <div class="info-list" id="jActivity">
+                <ul>
+                    
+                </ul>
+            </div>
+
+                <!--分页begin-->
+                <div class="mod-page clearfix">
+                    <div class="f-r" id="jPagination"></div>
+                </div>
+                <!--分页end-->
+        </div>
+        <!-- 右侧广告栏 -->
+        <div class="mod-right f-r">
+        <!-- 电商活动 -->
+            <div class="mod-policy">
+                <h2 class="mod-common-title">电商活动</h2>
+                 <!--#include file="./common/mod-policy.html"-->
+            </div>
+            <!-- 线上学习 -->
+            <div class="mod-course mt-40">
+                <h2 class="mod-common-title ml-20">线上学习</h2>
+                <!--#include file="./common/mod-study.html"-->
+            </div>
+            <!-- 园区组织 -->
+            <div class="mod-organize">
+                <h2 class="mod-common-title ml-20">园区组织</h2>
+                <!--#include file="./common/mod-orgnize.html"-->
+            </div>
+        </div>
+    </div>
+
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/activity'], function() {
+
+    });
+    </script>
+<!-- 资讯列表模板 -->
+    <script id="jWrap" type="text/html">
+    {{each resultList as value i}}
+    <li>
+         <a href="javascript:;" class="info-title">{value.title}}</a>
+            <div class="clearfix">
+                 <a href="javascript:;" class="img-wrap"><img src="//s1.zhongzhihui.com/lib/assets/images/s.gif" data-src="{{value.resourceUrl}}" class="jImg"/></a>
+                <div class="f-r mod-info-detail">
+                    <p>{value.text}</p>
+                    <span>{value.time}</span>
+                </div>
+            </div>
+    </li>
+    {{/each}}
+    </script>
+    <script id="tEmpty" type="textml">
+    <div class="ui-empty-list">
+        <div class="iyoyo iyoyo-box"></div>
+        <div class="txt">暂无数据</div>
+    </div>
+</script>
+
+</body>
+
+</html>

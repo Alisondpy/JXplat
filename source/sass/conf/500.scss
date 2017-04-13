@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+h1{
+	margin:0;
+	padding:0;
+}
+.mod-404{
+	text-align:center;
+	.bg-pic{
+		width:1108px;
+		height:701px;
+		overflow:hidden;
+		margin:0 auto;
+		background:url('../../images/fix-bg.png') no-repeat;
+		.title{
+			font-size:34px;
+			margin-top:210px;
+		}
+		.return{
+			display:inline-block;
+			margin-top:26px;
+			width:160px;
+			height:46px;
+			line-height:46px;
+			text-align:center;
+			background-color:#ec3e48;
+			color:#fff;
+			font-size:22px;
+			border-radius:40px;
+			text-decoration:none;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+	}
+}

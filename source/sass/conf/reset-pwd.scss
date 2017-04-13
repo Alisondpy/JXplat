@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/tips-text/tips-text";
+.mod-form{
+	width:360px;
+	background:#fff;
+	box-sizing:border-box;
+	padding:40px;
+	border:1px solid #ccc;
+	.item{
+		position:relative;
+	  &.error-red{
+		i{
+		  color:#fe5654;
+		}
+	  }
+		.jDynamic{
+			width:170px;
+		}
+		.jsVerifyCode{
+			width:100px;
+			border:none;
+			margin-left:6px;
+			margin-top:0;
+		}
+		i{
+			position:absolute;
+			width:20px;
+			height:20px;
+			top: 12px;
+    		left: 15px;
+			font-size:16px;
+			color:#95aab8;
+		}
+		.submit{
+			margin:8px 0;
+		}
+
+	}
+	
+}

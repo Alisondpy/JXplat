@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+.mod-about-us{
+	margin-top:60px;
+	.us-info{
+		width:440px;
+		margin-right:80px;
+		padding-top:80px ;
+		box-sizing:border-box;
+		border-bottom:1px solid #eee;
+		.iyoyo{
+			font-size:20px;
+			color:#fe5654;
+		}
+		h1{
+			position:relative;
+			font-size:24px;
+			color:#666;
+			margin-bottom:70px;
+			&:after{
+				content:"";
+				position:absolute;
+				width:70px;
+				height:1px;
+				background:#eee;
+				left:0;
+				bottom:-20px;
+			}
+		}
+		.icon-location{
+			font-size:30px;
+			color:#fe5654;
+		}
+		div{
+			font-size:16px;
+			color:#666;
+			margin-bottom:40px;
+			span{
+				display:inline-block;
+				vertical-align: top;
+				margin-right:5px;
+			}
+			.adress{
+				width:380px;
+			}
+		}
+	}
+	.map{
+		width:680px;
+		height:605px;
+		text-align:center;
+		line-height:605px;
+		overflow:hidden;
+		img{
+			width:100%;
+		}
+	}
+
+}

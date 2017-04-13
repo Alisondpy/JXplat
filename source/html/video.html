@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+<link rel="stylesheet" href="/css/conf/vedio.css" type="text/css" charset="utf-8">
+<script type="text/javascript">
+	 	$PAGE_DATA['baseStaticUrl']="//s1.zzhstatic.com/JXplat/";
+        $PAGE_DATA['loginSrc']="//s1.zzhstatic.com/JXplat/dist/html/login.html";
+        $PAGE_DATA['registerSrc']="//s1.zzhstatic.com/JXplat/dist/html/register.html";
+        $PAGE_DATA['resetPwdSrc']="//s1.zzhstatic.com/JXplat/dist/html/reset-pwd.html";
+        $PAGE_DATA['domId'] = "jIndexNewsDom";
+        $PAGE_DATA['loadUrl'] = "//s1.zzhstatic.com/JXplat/source/api/index.json";//请求路径
+
+
+         //m3u8播放器地址 必须同域
+        $PAGE_DATA['m3u8'] = 'http://192.168.2.80:3000/p-youyong/source/js/plugins/ckplayer/6.8.0/m3u8.swf';
+        //flash播放器地址 必须同域
+        $PAGE_DATA['ckplayer'] = 'http://192.168.2.80:3000/p-youyong/source/js/plugins/ckplayer/6.8.0/ckplayer.swf';
+        //播放资源路径
+        $PAGE_DATA['play'] = 'http://res.static.zhongzhihui.com/public/data/client/other/101339/2017/1/2017-01-06/5f99a33773872a3d3a486595fdfeba98.flv';
+        //开始播放时间
+        $PAGE_DATA['startTime'] = 0;
+        //设置当前课程的播放时间
+        $PAGE_DATA['setPlayTime'] = '';
+        //设置当前播放时间参数,记得替换
+        $PAGE_DATA['setPlayTimeParams'] = {
+            playTime:0,
+            duration:1000,
+            courseId: 1
+        };
+        $PAGE_DATA['examId'] = '';
+</script>
+</head>
+<body class="mod-vedio">
+	 <!-- header -->
+    <!--#include file="./common/header.html"-->
+	<input type="hidden" id="examUrl" value="${courseExamUrl!}">
+	<!-- main -->
+	<div class="video_top" id="jModVideoBox">
+		<div class="video_top_blk player-wrap">
+			<div class="video_top_tit">
+			<input type="hidden" id="courseId" name="courseId" value="${(courseItem.id)!}"/>
+				<div class="fr">
+	                <div id="star" style="display: none;"></div>
+	            	</a>
+            	</div>
+			</div>
+			<div id="flashContent" class="video_top_con">
+					<!-- 播放器 -->
+			</div>
+			<input type="hidden" id="hasLogin" value="${hasLogin?string('true','false')}"/> 
+			<div class="exam-tip" style="height: 100% ;  display: none;">
+				<button id="closePlayerExamTip" type="button" class="close" data-dismiss="exam-tip" style="color: #fff; opacity: 1; margin-right: 10px;">&times;</button>
+				<p class="player-login-content">
+					<a style="margin-top: 240px;" class="btn btn-primary" target="_blank" href="${courseExamUrl!}">进入考试</a>
+				</p>
+			</div>
+		</div>
+		</div>
+	</div>	
+
+	
+	<div class="body_auto cl">
+
+		<div class="video_btm">
+			<div class="live_btm_l">
+				<ul class="video_btm_nav" id="tags">
+					<li class="current teacher"><a href="#tagContent0">课程详情</a></li>
+				</ul>
+				<div id="tagContent" class="tagContent">
+
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- footer -->
+	 <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+   		 require(['conf/vedio'], function() {
+    });
+    </script>
+</body>
+</html>

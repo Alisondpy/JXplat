@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/tips-text/tips-text";
+.mod-form{
+	width:360px;
+	background:#fff;
+	box-sizing:border-box;
+	padding:40px;
+	div{
+		position:relative;
+	  .error-red{
+		i{
+		  color:#fe5654;
+		}
+	  }
+		i{
+			position:absolute;
+			width:20px;
+			height:20px;
+			top: 12px;
+			left: 15px;
+			color: #95aab8;
+			font-size: 16px;
+		}
+	}
+	.ui-btn{
+	 margin-top:30px;
+	}
+	.mod-user-process{
+		margin-top:6px;
+		a{
+			font-size:14px;
+			color:#4b677b;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		
+	}
+}

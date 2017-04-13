@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第三方服务详情页</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/service-detail.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+        $PAGE_DATA['loadUrl'] = "//s1.zzhstatic.com/JXplat/dist/html/talk.html";
+    </script>
+</head>
+<body>
+<!--#include file="./common/header.html"-->
+<div class="wrap clearfix mod-service-detail">
+    <div class="mod-left f-l">
+        <a href="javascript:;" class="img-wrap"><img data-src="http://n03.wbc.zhongzhihui.com/data/client/other/50301/2016/3/2016-03-02/8b182c729c6d4d8aa8e37c8ca148c781.jpg" alt="" class="jImg"/></a>
+        <div class="info">
+            <h3>杭州创仕龙网络科技有限公司</h3>
+            <p><a href="/service/vendor.htm?id=10380">商家信息</a></p>
+            <p><a href="/service/vendor_product.htm?id=10380">服务产品</a></p>
+        </div>
+    </div>
+    <div class="mod-detail f-r">
+        <div class="top clearfix">
+            <img src="http://n03.wbc.zhongzhihui.com/data/client/other/50301/2016/3/2016-03-02/8b182c729c6d4d8aa8e37c8ca148c781.jpg">
+            <div class="con  f-l">
+                <h3>创仕龙店铺运营一站式服务</h3>
+                <div class="brief">提供阿里巴巴运营整合方案</div>
+                <p >服务类型：设计</p>
+                <p >发布日期：2016-03-01</p>
+                <p>价格：  800</p>
+                <div  class="purchase jTalk">发起约谈</div>
+                <div class="waitTalk">等待约谈</div>
+            </div>
+        </div>
+
+        <div class="service_item">
+            <ul class="clearfix">
+                <li class="f-l active"><a href="javascript:;">服务详情</a></li>
+                <li class="f-l"><a href="javascript:;">约谈详情</a></li>
+            </ul>
+            <div>
+                <div class="service-info">
+                
+                </div>
+
+                <div class="service-info talk-detail">
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--#include file="./common/footer.html"-->
+<!--#include file="./common/js.html"-->
+<script type="text/javascript">
+    require(['conf/service-detail'], function() {
+    });
+</script>
+<!-- 资讯列表模板 -->
+<script id="jWrap" type="text/html">
+    {{each resultList as value i}}
+    <li>
+        <a href="javascript:;" class="info-title">{value.title}}</a>
+        <div class="clearfix">
+            <a href="javascript:;" class="img-wrap"><img src="//s1.zhongzhihui.com/lib/assets/images/s.gif" data-src="{{value.resourceUrl}}" class="jImg"/></a>
+            <div class="f-r mod-info-detail">
+                <p>{value.text}</p>
+                <span>{value.time}</span>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+</body>
+</html>

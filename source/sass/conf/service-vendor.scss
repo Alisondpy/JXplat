@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/pager/pager";
+.mod-service-detail{
+  margin-top:40px;
+  .mod-left{
+    width: 272px;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    .img-wrap{
+      width: 270px;
+      height: 190px;
+      display:inline-block;
+      overflow: hidden;
+      text-align: center;
+      line-height:190px;
+      background:rgba(0,0,0,.1);
+      img{
+       width:100%;
+        vertical-align:middle;
+      }
+    }
+    .info{
+      h3{
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      p{
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+  .mod-detail{
+  width:850px;
+    h3{
+      font-size: 22px;
+      margin-bottom:30px;
+    }
+    ul{
+      color:#333;
+      margin-bottom:30px;
+      font-size:14px;
+    }
+    p{
+      color:#333;
+      line-height:20px;
+      font-size:14px;
+      min-height:300px;
+    }
+  }
+}

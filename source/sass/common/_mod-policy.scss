@@ -1,0 +1,36 @@
+/*政策样式*/
+.mod-policy{
+	background:#fff;
+	padding:20px;
+	padding-bottom:0;
+	box-sizing:border-box;
+		li{
+			border-left:1px solid #dee1e5;
+			line-height:1.1;
+			height:30px;
+			padding-left:20px;
+			&:last-child{border:none;}
+			&:before{
+				content:"";
+				float:left;
+				width:8px;
+				height:8px;
+				border-radius:50%;
+				background:#fe5654;
+				margin-left:-24px;
+			}
+			&:hover{
+				a{
+					text-decoration:underline;
+				}
+			}
+			a{
+				display:inline-block;
+				width:100%;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			    margin-top:-5px;
+			}
+		}
+}

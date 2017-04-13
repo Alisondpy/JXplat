@@ -1,0 +1,17 @@
+{
+  "error": 0,
+  "msg": "服务器错误",
+  "data": {
+    "list":[
+      {"courseImg":"http://pic40.nipic.com/20140417/10035198_103051773153_2.jpg","courseName":"美工"},
+      {"courseImg":"http://img0.ph.126.net/GJZZlEQyB7duDmb4rMfweQ==/6597800941890803007.jpg","courseName":"客服"},
+      {"courseImg":"http://pic40.nipic.com/20140417/10035198_103051773153_2.jpg","courseName":"物流"},
+      {"courseImg":"http://img0.ph.126.net/GJZZlEQyB7duDmb4rMfweQ==/6597800941890803007.jpg","courseName":"运营"},
+      {"courseImg":"http://pic40.nipic.com/20140417/10035198_103051773153_2.jpg","courseName":"创业"},
+      {"courseImg":"http://img0.ph.126.net/GJZZlEQyB7duDmb4rMfweQ==/6597800941890803007.jpg","courseName":"客服"},
+      {"courseImg":"http://pic40.nipic.com/20140417/10035198_103051773153_2.jpg","courseName":"数据"},
+      {"courseImg":"http://img0.ph.126.net/GJZZlEQyB7duDmb4rMfweQ==/6597800941890803007.jpg","courseName":"客服"}
+    ]
+  },
+  "ver": "1.0"
+}

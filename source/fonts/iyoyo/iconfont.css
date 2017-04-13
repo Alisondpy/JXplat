@@ -1,0 +1,81 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1492063109657'); /* IE9*/
+  src: url('iconfont.eot?t=1492063109657#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1492063109657') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1492063109657') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1492063109657#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iyoyo {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-code:before { content: "\e601"; }
+
+.icon-play:before { content: "\e612"; }
+
+.icon-dizhi:before { content: "\e6d7"; }
+
+.icon-lianjie:before { content: "\e8d3"; }
+
+.icon-phone-1:before { content: "\e614"; }
+
+.icon-time:before { content: "\e626"; }
+
+.icon-dianhua:before { content: "\e602"; }
+
+.icon-login:before { content: "\e67e"; }
+
+.icon-man:before { content: "\e64a"; }
+
+.icon-email-1:before { content: "\e60c"; }
+
+.icon-top-sign:before { content: "\e632"; }
+
+.icon-location:before { content: "\e631"; }
+
+.icon-study:before { content: "\e62b"; }
+
+.icon-video:before { content: "\e639"; }
+
+.icon-dongtaizixun:before { content: "\e6bf"; }
+
+.icon-huodong:before { content: "\e75c"; }
+
+.icon-box:before { content: "\e62c"; }
+
+.icon-rocket:before { content: "\e65f"; }
+
+.icon-shield:before { content: "\e67a"; }
+
+.icon-range:before { content: "\e645"; }
+
+.icon-about-us:before { content: "\e649"; }
+
+.icon-admin:before { content: "\e615"; }
+
+.icon-mima:before { content: "\e688"; }
+
+.icon-search:before { content: "\e600"; }
+
+.icon-storage:before { content: "\e64d"; }
+
+.icon-jinnang:before { content: "\e603"; }
+
+.icon-zuzhi:before { content: "\e672"; }
+
+.icon-right-sign:before { content: "\e60d"; }
+
+.icon-down-sign:before { content: "\e60e"; }
+
+.icon-left-sign:before { content: "\e60f"; }
+
+.icon-play1:before { content: "\e610"; }
+
+.icon-play2:before { content: "\e611"; }
+

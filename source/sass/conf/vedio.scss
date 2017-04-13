@@ -1,0 +1,134 @@
+
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+.mod-vedio{
+	.video_top
+	{
+		background-color: #000;
+		width: 100%;
+		position:relative;
+	}
+
+	.video_top_blk
+	{
+		width: 1200px;
+		margin: 0 auto;
+	    position: relative;
+	}
+
+	.video_top_tit
+	{
+		color: white;
+		line-height: 42px;
+		font-size: 14px;
+	}
+	.video_top_con
+	{
+		height: 500px;
+	}
+	.player-login-tip{
+		padding: 8px 0px 8px 0px;
+		position: absolute;
+		top: 0px;
+		background: rgba(17, 17, 17, 0.80);
+		z-index: 2;
+		width: 100%;
+		color: #FFF;
+		text-align: center;
+	}
+	.btn-primary{
+		display:inline-block;
+		color: #fff;
+		background-color: #fe5654;
+		margin-top: 10px;
+		padding: 5px 10px;
+	    font-size: 14px;
+	    cursor: pointer;
+	}
+	.video_btm{
+		width:1200px;
+		margin:30px auto;
+		.teacher{
+			font-size:16px;
+			color:#333;
+		}
+		.tagContent{
+			width:100%;
+			padding:20px;
+			overflow:hidden;
+		}
+	}
+
+	 .mod-tourist-tips {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 871px;
+        margin-left:-435px;
+        overflow: hidden;
+        transition: height .6s linear;
+        height:0;
+        &.active{
+        	height: 80px;
+        }
+        .tips-panle,
+        .mask {
+            width: 871px;
+            height: 60px;
+        }
+        .tips-panle {
+            position: relative;
+            z-index: 2;
+            .btn-close {
+                position: absolute;
+                right: 10px;
+                top: 0px;
+                font-size: 30px;
+                color: #fff;
+                &:hover {
+                    color: #ff1c41;
+                }
+            }
+            .txt {
+                font-size: 16px;
+                color: #fff;
+                text-align: center;
+                height: 24px;
+                line-height: 24px;
+            }
+            .btn-box {
+                .btn-login {
+                	display: block;
+                    margin: 0 auto;
+                    width: 80px;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 14px;
+                    background-color: #ff1c41;
+                    color: #fff;
+                    border-radius: 2px;
+                    margin-top:10px; 
+                    text-align: center;
+                }
+            }
+        }
+        .mask {
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+            }
+
+}
+
+.ui-box-ft .ui-box-btn.autofocus{font-weight:normal;}
+.ui-box-iframe {width:360px;}
+.mod-vedio .mod-tourist-tips .tips-panle .btn-close{font-size:14px;font-weight:normal;top:10px;}
+.mod-vedio .mod-tourist-tips .tips-panle .btn-close:hover {
+    color: #fff;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/login.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+        $PAGE_DATA['registerSrc']="//s1.zzhstatic.com/JXplat/dist/html/register.html";
+        $PAGE_DATA['resetPwdSrc']="//s1.zzhstatic.com/JXplat/dist/html/reset-pwd.html";
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!-- 主要内容 start-->
+    <form class="mod-form" id="jSigninForm">
+        <div class="ulform" id="jContainer">
+           <div><i class="iyoyo icon-phone-1"></i><input type="text" name="username" placeholder="手机号／邮箱" class="ui-input" /></div>
+           <div ><i class="iyoyo icon-mima"></i><input type="password" name="password" placeholder="登录密码" class="ui-input"/></div>
+            <div><a href="javascript:;"  class="submit ui-btn" id="jMSubBtn">登录</a></div>
+            <div class="clearfix mod-user-process"><a href="javascript:;" class="forget-pwd f-l jToReset">忘记密码？</a><a href="javascript:;" class="to-register f-r jToRes">立即注册</a></div>
+        </div>
+    </form>
+    <!-- 主要内容 end-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/login'], function() {});
+    </script>
+</body>
+
+</html>

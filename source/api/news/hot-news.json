@@ -1,0 +1,49 @@
+{
+  "error": 0,
+  "msg": "服务器错误",
+  "data": {
+    "resultList":[
+      {
+        "activeTitle":"好好学习，天天向上",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":"人民币中间价8年来首次跌破6.9 这五类人最受伤！人民币中间价8年来首次跌破6.9 这五类人最受伤！",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":"人民币中间价8年来首次跌破6.9 这五类人最受伤！",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":" 这五类人最受伤",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":"寻找下一个创业奇点—海量免费媒体资源等你拿！",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":"好好学习，天天向上",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":"寻找下一个创业奇点—海量免费媒体资源等你拿！",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      },
+      {
+        "activeTitle":"好好学习，天天向上",
+        "imageUrl":"http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg",
+        "teacherName":"徐老师"
+      }
+    ]
+  },
+  "ver": "1.0"
+}

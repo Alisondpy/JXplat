@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>资讯详情</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/info-detail.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+        // 登录页面的路径
+        $PAGE_DATA["loadUrl"]="//s1.zzhstatic.com/JXplat/dist/html/index.html"
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="wrap clearfix">
+        <div class="mod-container f-l">
+            <div class="nav-bread">资讯动态 > 农村 > 正文</div>
+            <div class="mod-info-detail">
+                <h1>滴滴4月1日起清退非京牌 廉价网约车成历史</h1>
+                <div>
+                    <span>发布人：admin</span>
+                    <span>来源：网易新闻</span>
+                    <span>2017-3-12   12:33:30</span>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧广告栏 -->
+        <div class="mod-right f-r">
+            <div class="mod-search">
+                <div class="search f-l" id="jTopSearch">
+                    <input class="txt" id="topSearchBar" node-type="ipt" type="text" data-id="key" placeholder="请输入搜索内容...">
+                    <button id="jSearch" class="iyoyo icon-search"></button>
+                </div>
+            </div>
+            
+
+        <!-- 热点资讯 -->
+            <div class="mod-policy ">
+                <h2 class="mod-common-title">热点资讯</h2>
+                 <!--#include file="./common/mod-policy.html"-->
+            </div>
+        <!-- 国家政策 -->
+            <div class="mod-policy ">
+                <h2 class="mod-common-title">国家政策</h2>
+                 <!--#include file="./common/mod-policy.html"-->
+            </div>
+            <!-- 地方政策 -->
+            <div class="mod-policy">
+                <h2 class="mod-common-title">地方政策</h2>
+                 <!--#include file="./common/mod-policy.html"-->
+            </div>
+
+            <!-- 双创活动 -->
+            <div class="mod-activity mt-40">
+                <h2 class="mod-common-title">双创活动</h2>
+            <!--#include file="./common/mod-activity.html"-->
+            </div>
+            <!-- 线上学习 -->
+            <div class="mod-course">
+                <h2 class="mod-common-title ml-20">线上学习</h2>
+                <!--#include file="./common/mod-study.html"-->
+            </div>
+            <!-- 园区组织 -->
+            <div class="mod-organize">
+                <h2 class="mod-common-title ml-20">园区组织</h2>
+                <!--#include file="./common/mod-orgnize.html"-->
+            </div>
+        </div>
+    </div>
+
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/info-detail'], function() {
+    });
+    </script>
+<!-- 资讯列表模板 -->
+    <script id="jWrap" type="text/html">
+    {{each resultList as value i}}
+    <li>
+         <a href="javascript:;" class="info-title">{value.title}}</a>
+            <div class="clearfix">
+                 <a href="javascript:;" class="img-wrap"><img src="//s1.zhongzhihui.com/lib/assets/images/s.gif" data-src="{{value.resourceUrl}}" class="jImg"/></a>
+                <div class="f-r mod-info-detail">
+                    <p>{value.text}</p>
+                    <span>{value.time}</span>
+                </div>
+            </div>
+    </li>
+    {{/each}}
+    </script>
+    <!--#include file="./common/tj.html"-->
+    <!--#include file="./common/statistics.html"-->
+</body>
+
+</html>

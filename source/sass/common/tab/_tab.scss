@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*ui-tab*/
+
+.ui-tab {
+    .ui-tab-hd {
+        zoom: 1;
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        li {
+            float: left;
+            margin: 0 2px 0 0;
+            a {
+                height: 55px;
+                line-height: 55px;
+                padding: 0 60px;
+                display: inline-block;
+                background-color: #fff;
+                color: #44687d;
+                font-size: 18px;
+                text-decoration: none;
+                &:hover {
+                    color: #ea3e48;
+                }
+            }
+        }
+        li.current {
+            a {
+                height: 56px;
+                color: #ea3e48;
+            }
+        }
+    }
+    .ui-tab-bd {
+        background-color: #fff;
+        padding: 20px 30px;
+        .ui-tab-container {
+            display: none;
+            &.current {
+                display: block;
+            }
+        }
+    }
+}

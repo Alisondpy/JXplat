@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/*样式重置*/
+
+@import "./reset/reset";
+
+/*全局配置参数*/
+
+@import "./config/config";
+
+/*box*/
+
+@import "./box/box";
+
+/*animate loading*/
+
+@import "./animate/loading";
+
+/*表单*/
+
+@import "./button/button";
+@import "./input/input";
+
+/*公共头部样式*/
+
+@import "../module/header/header";
+
+/*公共footer样式*/
+@import "../module/footer/footer";
+
+/*重置字体样式*/
+
+.ibase,
+.iyoyo {
+    font-size: 12px;
+}
+
+
+/*公共常用样式*/
+
+body {
+    font: 12px/1.5 "Microsoft Yahei", "Arial", "Hiragino Sans GB", "San Francisco", "STHeiti";
+    min-width: 1300px;
+}
+
+a,
+body {
+    color: $normalColor;
+}
+
+a:hover {
+    color: #ff5d66;
+    text-decoration: none;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+a,
+button {
+    outline: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+p,
+ul,
+li,
+h2,
+h3,
+input {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+        font-weight:normal;
+        margin:0;
+    }
+
+a {
+    text-decoration: none;
+}
+
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.txt-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.img-error {
+    background: url('#{$gImgBase}error-img.gif');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.hide {
+    display: none;
+}
+
+.ui-empty-list {
+    @keyframes scale1 {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    .iyoyo {
+        animation: scale1 1s linear infinite;
+        margin: 0 auto;
+        display: block;
+        color: #c5c5c5;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 100px;
+        line-height: 100px;
+    }
+    .txt {
+        margin: 0 auto;
+        padding: 20px 0 0 0;
+        box-sizing:border-box;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        line-height: 30px;
+        color: #999;
+    }
+}

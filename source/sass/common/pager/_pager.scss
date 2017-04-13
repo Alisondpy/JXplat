@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/*分页控件*/
+.ui-pager {
+    color: #333;
+    zoom: 1;
+    margin-top:30px;
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    ul {
+        li {
+            float: left;
+            a,
+            span,
+            .ui-button,
+            input {
+                box-sizing: initial;
+                -webkit-user-select: none;
+                text-align: center;
+                display: inline-block;
+                font-size: 14px;
+                height: 30px;
+                line-height: 30px;
+                min-width: 14px;
+                padding: 0 8px;
+                color: #333;
+                border: 1px solid #bbb;
+            }
+            a:hover {
+                border-color: #ea3e48;
+                background-color: #ea3e48;
+                color: #fff;
+            }
+            a,
+            span {
+                margin: 0 5px 0 0;
+            }
+        }
+        .active {
+            .current {
+                border-color: #ea3e48;
+                background-color: #ea3e48;
+                color: #fff;
+            }
+            .next,
+            .prev {
+                border-color: #bcbcbc;
+                background-color: transparent;
+                color: #bcbcbc;
+            }
+        }
+        .disabled {
+            .ellipse {
+                border: 0;
+            }
+        }
+        .page-info {
+            .page-no {
+                width: 20px;
+                margin: 0 5px;
+            }
+            .ui-button{
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+}

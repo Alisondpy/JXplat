@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/mod-policy";
+@import "../common/mod-activity";
+@import "../common/mod-study";
+@import "../common/mod-orgnize";
+body{
+	background:#f6f6f6;
+	.mt-40{
+		margin-top:40px;
+	}
+	.ml-20{
+		margin-left:20px;
+	}
+}
+/*左侧样式*/
+.mod-container{
+	width:790px;
+	margin-top:40px;
+	.nav-bread{
+		font-size:14px;
+		color:#666;
+		line-height:1;
+		margin-bottom:20px;
+	}
+	.mod-info-detail{
+		width:100%;
+		overflow:hidden;
+		background:#fff;
+		padding:25px 15px;
+		box-sizing:border-box;
+		text-align:center;
+		h1{
+			font-weight:normal;
+			color:#333;
+			font-size:30px;
+			border-top:1px solid #ddd;
+			margin:0;
+			line-height:1;
+			padding:15px 0 10px;
+			text-align:left;
+		}
+		div{
+			border-bottom:1px solid #ddd;
+			padding-bottom:15px;
+			text-align:left;
+			span{
+				color:#999;
+				font-size:14px;
+				margin-right:30px;
+			}
+		}
+	}
+}
+
+/*右侧样式*/
+.mod-right {
+	width:380px;
+	margin-top:72px;
+	.mod-search{
+		height:60px;
+		margin-bottom:20px;
+	}
+	 .search{
+            width:380px;
+            height:60px;
+            position:relative;
+            background:#fff;
+            line-height:60px;
+            border-radius:50px;
+            padding-left:30px;
+            box-sizing:border-box;
+            border:1px solid #eee;
+            .lbl{
+                position: absolute;
+                left: 20px;
+                color: #999;
+                line-height: 60px;
+                font-size: 14px;
+                font-weight:normal;
+            }
+            .txt{
+                width:100%;
+                line-height:60px;
+                background:transparent;
+                border:none;
+            }
+            button{
+                color: #4b677b;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 18px;
+                right: 20px;
+                top: 50%;
+                margin-top:-15px;
+                text-align: center;
+                background-color: transparent;
+                border: 0;
+                color:#ff5454;
+            }
+        }
+	.mod-common-title{
+		font-size:24px;
+		color:#576671;
+		font-weight:normal;
+		margin-bottom:20px;
+	}
+}

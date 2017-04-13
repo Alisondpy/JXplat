@@ -1,0 +1,22 @@
+@charset "UTF-8";
+$gLibBase: '//s1.zhongzhihui.com/lib/assets/';
+
+/* ui components customize consts */
+
+//字体颜色
+$normalColor:#1f2c35; //常用字体字体颜色
+$hoverColor:#ec3e48; //hover或者选中字体颜色
+$disabledColor:#95aab8; //disabled字体颜色
+$grayColor:#4b677b; //当深灰色用
+//背景颜色
+$BgNormalColor:#ec3e48; //常用背景颜色
+$BgHoverColor:#ec3e48; //常用背景颜色hover态
+$BgDisabledColor:#95aab8; //disabled背景样色
+$width:1180px;
+// ui-button default style
+$button-fg: #777;
+$button-bg: #f2f2f2;
+$button-border-color: #ddd;
+$button-hover-bg: #fafafa;
+$button-hover-border-color: #ddd;
+$doc-width: 1190px;

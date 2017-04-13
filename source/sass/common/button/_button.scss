@@ -1,0 +1,102 @@
+/*
+Generic button mixins
+@author Allex Wang (allex.wxn@gmail.com)
+*/
+
+$button-fg: #777 !default;
+$button-bg: #f2f2f2 !default;
+$button-border-color: #ddd !default;
+$button-hover-bg: #fafafa !default;
+$button-hover-border-color: #ddd !default;;
+
+// ui-button mixin defines
+
+@mixin ui-button-style(
+  $fg: $button-fg,
+  $bg: $button-bg,
+  $border-color: $button-border-color,
+  $hover-bg: $button-hover-bg,
+  $hover-border-color: $button-hover-border-color
+) {
+    color: $fg;
+    border: 1px solid $border-color;
+    background-color: $bg;
+    &:hover {
+      background-color: $hover-bg;
+      border: 1px solid $hover-border-color;
+    }
+    @content;
+}
+
+@mixin ui-button(
+  $name,
+  $fg: $button-fg,
+  $bg: $button-bg,
+  $border-color: $button-border-color,
+  $hover-bg: $button-hover-bg,
+  $hover-border-color: $button-hover-border-color
+) {
+  .ui-button-#{"" + $name} {
+    @content;
+    @include ui-button-style($fg, $bg, $border-color, $hover-bg, $hover-border-color);
+  }
+}
+
+.ui-button {
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px;
+    height: 22px;
+    font: 400 12px/21px 'microsoft yahei';
+    cursor: pointer;
+    outline: none;
+    border-radius:2px;
+    @include ui-button-style();
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.disabled, &[disabled], &:disabled {
+        @include ui-button-style(#ccc, #f2f2f2, #ddd, #f2f2f2, #ddd) {
+            cursor: text;
+        }
+    }
+}
+
+/* .ui-button-red */
+@include ui-button("red", #fff, #db0000, #db0000, #f40000, #f40000);
+
+/* .ui-button-orange */
+@include ui-button(orange, #fff, #f90, #f90, #ffa800, #ffa800);
+
+/* .ui-button-green */
+@include ui-button(green, #fff, #090, #090, #007c00, #007c00);
+
+/* button icon */
+.ui-button .iconfont {
+    margin-right: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-text-stroke-width: 0;
+}
+
+/* large button */
+.ui-button-l {
+    height: 46px;
+    padding: 0 20px;
+    font: 400 18px/46px 'microsoft yahei';
+    .iconfont {
+        font-size: 20px;
+    }
+}
+
+/* middle button */
+.ui-button-m {
+    height: 26px;
+    padding: 0 15px;
+    font: 400 16px/26px 'microsoft yahei';
+    .iconfont {
+        font-size: 16px;
+    }
+}

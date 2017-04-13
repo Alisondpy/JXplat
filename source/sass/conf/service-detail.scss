@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/pager/pager";
+.mod-service-detail{
+  margin-top:40px;
+  .mod-left{
+    width: 272px;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    .img-wrap{
+      width: 250px;
+      height: 190px;
+      display:inline-block;
+      overflow: hidden;
+      text-align: center;
+      line-height:190px;
+      background:rgba(0,0,0,.1);
+      position:relative;
+      img{
+        height:100%;
+        left:50%;
+        position:absolute;
+        margin-left:-125px;
+      }
+    }
+    .info{
+      h3{
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      p{
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+  .mod-detail{
+    width:870px;
+    .top{
+      img{
+          width: 432px;
+          height: 292px;
+          float: left;
+      }
+      .con{
+        margin-left: 50px;
+        width: 385px;
+        h3{
+          ont-size: 18px;
+          margin: 13px 0 40px;
+        }
+        .brief{
+          max-height: 75px;
+          overflow-y: auto;
+          font-size: 14px;
+        }
+        p{
+          font-size: 14px;
+          margin-top:8px;
+        }
+        .purchase{
+          width: 140px;
+          height: 46px;
+          line-height: 46px;
+          display: block;
+          text-align: center;
+          background: #fe5654;
+          font-size: 18px;
+          color: #fff;
+          margin-top:10px;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+        .waitTalk{
+          display:none;
+            @extend .purchase;
+            background:#eee;
+            color:#ccc;
+            &:hover{
+              text-decoration:none;
+            }
+
+          }
+      }
+    }
+    .service_item{
+      width:100%;
+      overflow:hidden;
+      margin-top:30px;
+      min-height:400px;
+      .service-info{
+        padding:20px;
+        font-size:14px;
+        line-height:28px;
+      }
+      li{
+        margin-left:20px;
+        padding: 0 5px;
+        &.active{
+          border-bottom:1px solid #fe5654;
+        }
+        a{
+          font-size:16px;
+          color:#333;
+        }
+      }
+    }
+  }
+}
+.ui-box-iframe{
+    width:450px;
+}

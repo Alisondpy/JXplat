@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>报名详情</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/apply.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!-- 主要内容 start-->
+    <form class="mod-form" id="jSigninForm">
+        <ul class="ulform" id="jContainer">
+            <li class="item">
+                <label for="jName" class="mark"><i class="necessary">*</i>联系人</label>
+                <input id="jName" class="ui-input" name="realname" type="text" placeholder="请输入姓名" value=""} />
+            </li>
+            <li class="item">
+                <label for="jMobile" class="mark"><i class="necessary">*</i>手机号</label>
+                <input id="jMobile" class="ui-input" name="mobile" type="text" placeholder="请输入您的手机号" value="" />
+            </li>
+            <li class="item">
+                <label for="jScholl" class="mark"><i class="necessary">*</i>公司/学校</label>
+                <input id="jScholl" class="ui-input" name="school" type="text" value="" placeholder="请填写您的公司或学校"/>
+            </li>
+            <li class="item">
+                <label class="mark"><i class="necessary">*</i>岗位/专业</label>
+                <input class="ui-input" name="job" type="text" value="" placeholder="请填写您的岗位或专业"/>
+            </li>
+            <li class="item">
+                <a href="javascript:;" class="submit ui-btn ui-btn-danger jMSubBtn" id="jMSubBtn">提交</a>
+            </li>
+        </ul>
+    </form>
+    <!-- 主要内容 end-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+        require(['conf/apply'], function() {});
+    </script>
+</body>
+
+</html>

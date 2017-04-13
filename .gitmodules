@@ -1,0 +1,3 @@
+[submodule "source/js/lib"]
+	path = source/js/lib
+	url = https://github.com/zhongzhihui/lib.git
