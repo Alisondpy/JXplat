@@ -27,11 +27,11 @@ define(function(require, exports, module) {
         var options = _this.options;
         var el = _this.el;
         var categoryId = $("#categoryIds").find(".active").children().attr("value") || "";
-        el.html("正在加载中...");
-        if(categoryId){
+        el.html("<div class='mod-load-tips'>正在加载中...</div>");
+       if(categoryId){
             IO.get(options.url,{'categoryId':categoryId},function(res){
                     if(options.url == null){
-                        el.html("数据请求出错");
+                        el.html("<div class='loadTips'>数据请求出错</div>");
                     }
                     if(res.data.resultList == null || res.data.resultList.length <= 0){
                           var html = template('tEmpty',1);
@@ -59,7 +59,7 @@ define(function(require, exports, module) {
                             loadingClass: 'img-error',
                             mouseWheel: true,
                             effect: 'show',
-                            event : "mouseover",
+                            skipInvisible: false,
                             snap: true
                         });
                     }
@@ -70,7 +70,6 @@ define(function(require, exports, module) {
                 }
             )
         }
-
     };
     templateRender.prototype._reload = function(){
         var _this = this;

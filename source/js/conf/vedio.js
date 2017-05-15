@@ -5,12 +5,12 @@ define(function(require, exports, module) {
     var io = require('lib/core/1.0.0/io/request');
     var template = require("template");
     var TouristTips = require('module/monitor/1.0.0/tourist-tips');
+     require('conf/header');
 
     //====================播放器 start
 
     //====================后台获取参数 start
     var courseId = $PAGE_DATA['courseId'];
-    //var examId = $PAGE_DATA['examId'];
     var loginStatus = $PAGE_DATA['loginStatus'];
     //====================后台获取参数 end
     
@@ -74,7 +74,7 @@ define(function(require, exports, module) {
     });
     //视频播放结束
     var jArrowR = $('#jArrowR');
-    player.on('ended',function(){
+   /* player.on('ended',function(){
         var newTab;
         var href = jArrowR.attr('href');
         if(examId != ''){
@@ -99,7 +99,7 @@ define(function(require, exports, module) {
                 window.location.href = href;
             }
         }
-    });
+    });*/
     //====================播放器 end
 
     // 点击登录

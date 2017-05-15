@@ -82,12 +82,23 @@ define(function(require, exports, module) {
 
     //tab页切换
 
-    $("#categoryIds").on("click","li",function(){
+    $("#categoryIds").on("click","li",function(e){
         var _this = $(this);
-        _this.addClass("active").siblings().removeClass("active");
+         e.stopPropagation();
         var keyword = $("#topSearchBar").val() || "";
-        var categoryId = _this.find('a').attr('value');
-        renderList(loadUrl,{'categoryId':categoryId,"keyWord":keyword},"jWrap",domId,jPagination);
+        if(_this.is($(".more-btn"))){
+
+        }else{
+            $("#categoryIds").find("li").removeClass("active");
+            _this.addClass("active");
+            
+            if(_this.parent().is($(".mod-more-nav"))){
+                $(".more-btn").addClass("active");
+            }
+            var categoryId = _this.find('a').attr('value');
+            renderList(loadUrl,{'categoryId':categoryId,"keyWord":keyword},"jWrap",domId,jPagination);
+        }
+        
 
     })
     // 搜索渲染分页

@@ -134,10 +134,19 @@
         line-height:18px;
         color:#989898;
         margin:0 10px;
+        height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         .course-label{
           padding:0 5px;
           background:#fe5654;
           color:#fff;
+          height: 18px;
+          max-width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
     }

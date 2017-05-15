@@ -4,9 +4,9 @@ define(function(require, exports, module) {
     var $ = require('jquery');
     var io = require('lib/core/1.0.0/io/request');
     var box = require('lib/ui/box/1.0.1/crossbox');
+    
     // 登录弹出层
     $(".Jlogin").on("click",function(){
-        var topBox = 
         box.loadUrl($PAGE_DATA['loginSrc'], {
                 title: '登录',
                 autoRelease: false,
@@ -31,5 +31,10 @@ define(function(require, exports, module) {
         }
     })
 
-    
+    //退出登录跳转链接
+    $('#logoutBtn').click(function(){
+        var currentUrl = window.location.pathname +""+ window.location.search;
+        window.location.href="/login/toLogout?redirectUrl="+currentUrl;
+    });
+
 });

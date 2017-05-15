@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Thu Apr 13 13:58:29 2017
+Created by FontForge 20120731 at Thu Apr 20 16:55:38 2017
  By admin
 </metadata>
 <defs>
@@ -16,7 +16,7 @@ Created by FontForge 20120731 at Thu Apr 13 13:58:29 2017
     ascent="896"
     descent="-128"
     x-height="792"
-    bbox="0 -146 1361 896.211"
+    bbox="0 -146 7376 896.211"
     underline-thickness="0"
     underline-position="0"
     unicode-range="U+0078-E8D3"
@@ -145,5 +145,7 @@ d="M115 384q-15 45 9 68l425 425q19 19 42 19t42.5 -19t19.5 -42.5t-19 -42.5l-349 -
 d="M884 -128h-744v0q-58 0 -99 41t-41 99v744q0 58 41 99t99 41h744q58 0 99 -41t41 -99v-744v0q0 -58 -41 -99t-99 -41zM400 575l267 -154q22 -12 22 -37t-22 -37l-267 -154q-22 -13 -43.5 -0.5t-21.5 37.5v308q0 25 21.5 37t43.5 0z" />
     <glyph glyph-name="play2" unicode="&#xe611;" 
 d="M220 881l696 -400q37 -21 50.5 -59t0 -76t-50.5 -59l-696 -400q-28 -17 -58 -15t-54.5 15t-40.5 39.5t-16 57.5v800q0 31 16 57t40.5 39.5t54.5 15.5t58 -15z" />
+    <glyph glyph-name="biankuangxiaosanjiao" unicode="&#xe616;" horiz-adv-x="15530" 
+d="M7344 -128h-916q-14 0 -23 9.5t-9 22.5v906q0 13 9 22.5t23 9.5h430l39 54l39 -54h408q13 0 22.5 -9.5t9.5 -22.5v-906q0 -13 -9.5 -22.5t-22.5 -9.5z" />
   </font>
 </defs></svg>

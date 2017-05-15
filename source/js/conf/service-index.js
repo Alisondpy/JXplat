@@ -27,7 +27,7 @@ define(function(require, exports, module) {
             url:url,
             data:data,
             options: {
-                pageSize: data.pageSize,
+                pageSize: 24,
                 currentPage: 1
             }
         });

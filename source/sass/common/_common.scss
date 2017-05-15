@@ -34,12 +34,15 @@
 .iyoyo {
     font-size: 12px;
 }
-
+.mod-load-tips{
+    text-align:center;
+    font-size:16px;
+}
 
 /*公共常用样式*/
 
 body {
-    font: 12px/1.5 "Microsoft Yahei", "Arial", "Hiragino Sans GB", "San Francisco", "STHeiti";
+    font: 14px/1.5 "Microsoft Yahei", "Arial", "Hiragino Sans GB", "San Francisco", "STHeiti";
     min-width: 1300px;
 }
 
@@ -103,7 +106,7 @@ a {
     clear: both;
     visibility: hidden;
 }
-
+.loadTips{width:100%;text-align:center;}
 .clearfix {
     zoom: 1;
 }

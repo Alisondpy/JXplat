@@ -37,12 +37,18 @@
 			color:#fff;
 			margin-top:0;
 		}
+		ul{
+			height:400px;
+			margin-top:20px;
+			overflow:hidden;
+		}
 		li{
 			a{
 				width:100%;
-				line-height:30px;
+				line-height:1;
 				color:#fff;
-				font-size:14px;
+				font-size:18px;
+				margin-bottom:17px;
 				display:inline-block;
 				@extend .txt-overflow;
 				&:hover{
@@ -60,7 +66,7 @@
 			width:810px;
 			height:60px;
 			line-height:60px;
-			background:rgba(255,255,255,.4);
+			background:rgba(0,0,0,.4);
 			color:#fff;
 			padding-left:20px;
 			font-size:16px;
@@ -107,7 +113,7 @@ body{
 				}
 				span{
 					color:#999;
-					font-size:12px;
+					font-size:14px;
 					margin-left:20px;
 				}
 			}
@@ -350,6 +356,7 @@ body{
 						    text-overflow: ellipsis;
 						    overflow: hidden;
 						    margin-top:-5px;
+						    font-size:16px;
 						}
 					}
 				}

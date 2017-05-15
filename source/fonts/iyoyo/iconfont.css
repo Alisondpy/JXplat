@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1492063109657'); /* IE9*/
-  src: url('iconfont.eot?t=1492063109657#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1492063109657') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1492063109657') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1492063109657#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1492678539076'); /* IE9*/
+  src: url('iconfont.eot?t=1492678539076#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1492678539076') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1492678539076') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1492678539076#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iyoyo {
@@ -78,4 +78,6 @@
 .icon-play1:before { content: "\e610"; }
 
 .icon-play2:before { content: "\e611"; }
+
+.icon-biankuangxiaosanjiao:before { content: "\e616"; }
 

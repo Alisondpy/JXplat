@@ -210,6 +210,12 @@
     '' +
     '</symbol>' +
     '' +
+    '<symbol id="icon-biankuangxiaosanjiao" viewBox="0 0 15530 1024">' +
+    '' +
+    '<path d="M7344.023465 1024h-916.152664a32.3348 32.3348 0 0 1-32.3348-32.3348V86.290803a32.3348 32.3348 0 0 1 32.3348-32.3348H6857.654183L6896.693065 0 6935.742725 53.956003H7344.023465a32.3348 32.3348 0 0 1 32.3348 32.3348v905.374397a32.3348 32.3348 0 0 1-32.3348 32.3348z" fill="#FFFFFF" ></path>' +
+    '' +
+    '</symbol>' +
+    '' +
     '</svg>'
   var script = function() {
     var scripts = document.getElementsByTagName('script')

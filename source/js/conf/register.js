@@ -179,7 +179,7 @@ define(function(require, exports, module) {
                 box.error((res && res.msg) || '网络错误，请重试！');
             });
     });
-    $(".jPopBtn").on("click", function() {
+    /*$(".jPopBtn").on("click", function() {
          var topBox = box.get(window);
         topBox.hide();
         box.loadUrl($PAGE_DATA['popUrl'], {
@@ -187,7 +187,7 @@ define(function(require, exports, module) {
             autoRelease: false,
             modal: true //是否有遮罩层
         });
-    })
+    })*/
 
     $(".jToLogin").on("click",function(){
          var topBox = box.get(window);

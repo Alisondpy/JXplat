@@ -50,11 +50,12 @@ define(function(require, exports, module) {
 
      var lazy = new Lazyload($('.jImg'), {
         loadingClass: 'img-error',
-        mouseWheel: false,
+        mouseWheel: true,
         effect: 'fadeIn',
         snap: true
     });
    
-});
+  
+})
 
 

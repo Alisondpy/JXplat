@@ -9,13 +9,17 @@ define(function(require, exports, module) {
     var template=require("template");
     var io = require('lib/core/1.0.0/io/request');
     var box = require('lib/ui/box/1.0.1/crossbox');
+    
+    require('conf/header');
+
     $("#jReport").on("click",function(){
         if(loginStatus != "false"){
-            box.loadUrl($PAGE_DATA['applyUrl'], {
+            var applyBox = box.loadUrl($PAGE_DATA['applyUrl'], {
                 title: '报名详情',
                 autoRelease: false,
                 modal: true //是否有遮罩层
             });
+            applyBox.css({"width":"450px"});
         }else{
             box.loadUrl($PAGE_DATA['loginSrc'], {
                 title: '登录',
