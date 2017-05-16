@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/*右侧主内容*/
+
+.ifm-right-container {
+    float: right;
+    width: 870px;
+    //右侧框架布局
+    .ifm-tab {
+        .ifm-tab-hd {
+            zoom: 1;
+            &:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            .ifm-tab-item {
+                float: left;
+                margin: 0 2px 0 0;
+                a {
+                    height: 55px;
+                    line-height: 55px;
+                    padding: 0 60px;
+                    display: inline-block;
+                    background-color: #fff;
+                    color: #44687d;
+                    font-size: 18px;
+                    text-decoration: none;
+                    &:hover {
+                        color: #ea3e48;
+                    }
+                }
+                &.current {
+                    a {
+                        height: 56px;
+                        color: #ea3e48;
+                    }
+                }
+            }
+        }
+        .ifm-tab-bd {
+            .ifm-tab-container {
+                display: none;
+                &.current {
+                    display: block;
+                }
+            }
+        }
+    }
+    .ifm-hd {
+        position: relative;
+        .ifm-tab-hd {
+            float: left;
+        }
+        .ifm-top-bar {
+            float: right;
+        }
+    }
+    .ifm-main-container {
+        padding: 20px 0;
+        background-color: #fff;
+    }
+    .ifm-bottom-bar {
+        padding: 20px 0 30px;
+        .pager {
+            float: right;
+            .page-no {
+                background: transparent;
+            }
+        }
+    }
+}

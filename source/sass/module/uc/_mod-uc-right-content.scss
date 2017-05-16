@@ -1,0 +1,132 @@
+.mod-uc-right-content {
+    width: 864px;
+    height: 865px;
+    background-color: #fff;
+    letter-spacing: 1px;
+    .top {
+        width: 864px;
+        height: 52px;
+        background-color: #e4ebf0;
+        font-size: 16px;
+        /*px*/
+        .study,
+        .complete {
+            width: 180px;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            background-color: #fff;
+            //border-bottom: 2px solid #e4ebf0;
+        }
+        .search {
+            line-height: 40px;
+            width: 252px;
+            height: 40px;
+            padding-left: 18px;
+            border-radius: 40px;
+            border: 1px solid #8195a4;
+            input[type="text"] {
+                padding: 0;
+                width: 220px;
+                height: 40px;
+                line-height: 40px;
+                border: none;
+                font-size: 14px;
+                /*px*/
+                background-color: #e4ebf0;
+            }
+            .iyoyo {
+                font-weight: bold;
+                font-size: 16px;
+                /*px*/
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    //列表内容展示
+    .content {
+        width: 864px;
+        height: 770px;
+        overflow: hidden;
+        //border-top: 2px solid #e4ebf0;
+        .item {
+            width: 804px;
+            //height: 60px;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e4ebf0;
+            .left-title {
+                .up {
+                    line-height: 30px;
+                    .job {
+                        display: inline-block;
+                        width: 200px;
+                        font-size: 20px;
+                        /*px*/
+                    }
+                    .iyoyo {
+                        margin-left: 10px;
+                        font-size: 20px;
+                        color: #95aab8;
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+                .down {
+                    line-height: 30px;
+                    font-size: 14px;
+                    /*px*/
+                    .begin,
+                    .teacher,
+                    .people {
+                        display: block;
+                        float: left;
+                        line-height: 30px;
+                        margin-right: 10px;
+                        color: #95aab8;
+                    }
+                    .date,
+                    .name,
+                    .number {
+                        display: block;
+                        float: left;
+                        line-height: 30px;
+                        margin-right: 26px;
+                        color: #4b677b;
+                    }
+                    .name {
+                        width: 50px;
+                    }
+                }
+            }
+            .right-start-button {
+                line-height: 60px;
+                .over-time,
+                .already {
+                    margin-right: 10px;
+                }
+                .over-time {
+                    color: #95aab8;
+                }
+                .already {
+                    .offline {
+                        font-style: normal;
+                        font-weight: bold;
+                    }
+                    .online {
+                        font-style: normal;
+                    }
+                }
+                .ui-btn {
+                    width: 90px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 12px;
+                    /*px*/
+                }
+            }
+        }
+    }
+}

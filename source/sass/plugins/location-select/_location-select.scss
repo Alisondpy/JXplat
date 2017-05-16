@@ -1,0 +1,210 @@
+.ui-location-select {
+    position: relative;
+    font-size: 12px;
+    height: 26px;
+    /* display: none; */
+    float: left;
+    .cache-data {
+        display: none;
+    }
+    label.error {
+        position: absolute;
+        left: 372px;
+        color: red;
+        text-align: left;
+        width: 300px;
+    }
+    .text {
+        border: 1px solid #e4e4e4;
+        border-radius: 3px;
+        padding-left: 5px;
+        padding-right: 20px;
+        position: relative;
+        background: #fff;
+        height: 26px;
+        line-height: 26px;
+        color: #666;
+        cursor: pointer;
+        .text-div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            zoom: 1;
+            max-width: 200px;
+            i {
+                font-style: normal;
+                padding-right: 10px;
+                color: #666;
+            }
+        }
+        b {
+            display: block;
+            -webkit-backface-visibility: hidden;
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border-width: 5px;
+            border-style: solid dashed dashed;
+            border-color: #333132 transparent transparent;
+            font-size: 0;
+            line-height: 0;
+            transition: transform .2s ease-in;
+            transform: rotate(0deg);
+            transform-origin: 50% 30%;
+        }
+        .hover-arrow {
+            border-color: #333132 transparent transparent;
+            transition: transform .2s ease-in;
+            transform: rotate(180deg);
+            transform-origin: 50% 30%;
+        }
+    }
+    .clr {
+        width: 17px;
+        height: 17px;
+        background: url('#{$gImgBase}location-select/close.png') no-repeat;
+        cursor: pointer;
+        position: absolute;
+        right: -9px;
+        top: -9px;
+        &:hover {
+            /* background: url(images/close-hover.png) no-repeat; */
+        }
+    }
+    .limit {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        _zoom: 1;
+        _display: inline;
+        max-width: 70px;
+    }
+    .content {
+        /* #a3a3a3 */
+        border: 1px solid #e4e4e4;
+        border-radius: 0px 3px 3px 3px;
+        box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        width: 390px;
+        background: #fff;
+        z-index: 0;
+        top: 26px;
+        left: 0px;
+        padding: 15px;
+        display: none;
+        .mt {
+            .tab {
+                height: 25px;
+                border-bottom: 1px solid #edd28b;
+                li {
+                    display: inline-block;
+                    float: left;
+                    cursor: pointer;
+                    margin-top: 0px;
+                    min-width: 50px;
+                    position: relative;
+                    height: 24px;
+                    line-height: 23px;
+                    padding: 0 21px 1px 11px;
+                    margin-right: 3px;
+                    border: 1px solid #ddd;
+                    border-radius: 3px 3px 0px 0px;
+                    border-bottom: 0;
+                    color: #ccc;
+                    text-align: center;
+                    i {
+                        display: block;
+                        -webkit-backface-visibility: hidden;
+                        position: absolute;
+                        right: 8px;
+                        top: 10px;
+                        width: 0;
+                        height: 0;
+                        border-width: 5px;
+                        border-style: solid dashed dashed;
+                        border-color: #ccc transparent transparent;
+                        font-size: 0;
+                        line-height: 0;
+                        transition: transform .2s ease-in;
+                        transform: rotate(0deg);
+                        transform-origin: 50% 30%;
+                    }
+                    &.hover {
+                        height: 25px;
+                        background-color: #fff;
+                        border: 1px solid #edd28b;
+                        border-bottom: 1px solid #fff;
+                        padding: 0 20px 0 10px;
+                        line-height: 23px;
+                        text-decoration: none;
+                        color: #000;
+                        z-index: 1;
+                        i {
+                            border-color: #000 transparent transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .mc {
+            .load-txt-box {
+                text-align: center;
+                min-height: 100px;
+                background: url('#{$gImgBase}location-select/loading.gif') no-repeat;
+                background-position: 50%;
+            }
+            .area-list {
+                padding-top: 5px;
+                margin-top: 0px;
+                max-height: 150px;
+                overflow: auto;
+                width: 100%;
+                li {
+                    display: inline-block;
+                    float: left;
+                    width: 70px;
+                    height: auto;
+                    min-height: 0;
+                    padding: 2px 0 2px 15px;
+                    margin-top: 0px;
+                    a {
+                        float: left;
+                        padding: 2px 4px;
+                        color: #333;
+                        line-height: 18px;
+                        &:hover {
+                            background: #eee;
+                            text-decoration: none;
+                        }
+                    }
+                    &.hover {
+                        a {
+                            background: #005ea7;
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* show or hide */
+
+.ui-location-select-hover {
+    position: relative;
+    z-index: 2;
+    .text {
+        border-bottom: 0px;
+        z-index: 1;
+    }
+    .content {
+        display: block;
+        /* min-height: 145px; */
+    }
+}
