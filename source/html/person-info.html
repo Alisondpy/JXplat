@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>个人信息</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/person-info.css" type="text/css" charset="utf-8">
+    <script type="text/javascript">
+    $PAGE_DATA['getPager'] = $PAGE_DATA['baseStaticUrl'] + 'source/api/uc/index/pager.json';
+    $PAGE_DATA['location'] = $PAGE_DATA['baseStaticUrl'] + 'region/queryRegion?parentId=';
+//    $PAGE_DATA['zjCity'] = $PAGE_DATA['baseStaticUrl'] + 'region/queryRegion?parentId=';
+//    $PAGE_DATA['zjCityCountry'] = $PAGE_DATA['baseStaticUrl'] + 'region/queryRegion?parentId=';
+    </script>
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="mod-page">
+        <div class="ifm-uc clearfix">
+            <!--#include file="./module/uc/left-menu.html"-->
+            <div class="ifm-right-container">
+                <div id="jIfmTab" class="ifm-tab">
+                    <div class="ifm-hd clearfix">
+                        <!-- tab 头部 start -->
+                        <ul class="clearfix ifm-tab-hd" node-type="hd">
+                            <li class="ifm-tab-item current" node-type="hdItem" data-target="1"><a href="javascript:;">个人信息</a></li>
+                            <li class="ifm-tab-item" node-type="hdItem" data-target="2"><a href="javascript:;">修改登陆密码</a></li>
+                        </ul>
+                        <!-- tab 头部 end -->
+                    </div>
+                    <div class="ifm-tab-bd" node-type="bd">
+                        <!-- tab内容区域-1 start-->
+                        <div class="ifm-tab-container current" node-type="container" data-id="1">
+                            <div class="ifm-main-container">
+                                <input type="hidden" name="province_hid" id="province_hid" value="${(userBaseInfo.province)!}" />
+                                <input type="hidden" name="city_hid" id="city_hid" value="${(userBaseInfo.city)!}" />
+                                <input type="hidden" name="county_hid" id="county_hid" value="${(userBaseInfo.county)!}" />
+                                <!-- 页面主内容 start -->
+                                <div class="mod-personinfo">
+                                    <form id="jInfoForm" autocomplete="off">
+                                        <div class="line">
+                                            <span><em>注册时间:</em><i>2016-05-19 16:30:56</i></span>
+                                            <span class="load"><em>登陆次数:</em><i>53</i></span>
+                                            <span><em>上次登陆时间:</em><i>2016-05-19 16:30:56</i></span>
+                                        </div>
+                                        <div class="in-avater">
+                                            <span class="avater-now">当前头像</span>
+                                            <a href="javascript:;" class="avater" id="jAvater">
+                                                <img class="jImg img" src="http://i0.hdslb.com/bfs/archive/c6ce1ec8823bac470770985bb851946e938e7411.jpg_320x200.jpg">
+                                                <div class="mask">
+                                                </div>
+                                                <div class="txt">
+                                                编辑头像
+                                                </div>
+                                            </a>
+                                            <input type="hidden" name="avatarUrl" id="jAvatar">
+                                        </div>
+                                        <!-- 个人信息统计 -->
+                                        <div class="info clearfix">
+                                            <div class=" item pet">
+                                                <label for="jPet"><span>*</span>昵称</label>
+                                                <input type="text" name="nickName"  class="ui-input" id="jPet" placeholder="请输入您的昵称">
+                                            </div>
+                                            <div class="item">
+                                                <label for="jName"><span>*</span>真实姓名</label>
+                                                <input type="text" name="realName" class="ui-input" id="jName" placeholder="请输入您的真实姓名">
+                                            </div>
+                                            <div class="item">
+                                                <label for="jPhonenum"><span>*</span>手机号码</label>
+                                                <input type="text" id="jPhonenum" class="ui-input" name="mobile" placeholder="请输入您的手机号码" readonly="readonly">
+                                            </div>
+                                            <div class="item">
+                                                <label for="jMail"><span>*</span>邮箱</label>
+                                                <input type="text" id="jMail" class="ui-input" name="email" placeholder="请输入您的邮箱" readonly="readonly">
+                                            </div>
+                                            <div class="item">
+                                                <label for="jCareer"><span>*</span>职业</label>
+                                                <input type="text" id="jCareer" class="ui-input" name="job" placeholder="请输入您的职业">
+                                            </div>
+                                            <div class="item">
+                                                <label for="jCompany"><span>*</span>所属公司</label>
+                                                <input type="text" id="jCompany" class="ui-input" name="unit" placeholder="请输入您的所属公司名称">
+                                            </div>
+                                            <div class="check">
+                                                性别
+                                                <input type="radio" id="women" value="0" name="sex"> 
+                                                <label for="women">女</label>
+                                                <input type="radio" id="male" value="1" name="sex">
+                                                <label for="male">男</label>
+                                            </div>
+                                            <div class="item">
+                                                <label for="jQQ">QQ</label>
+                                                <input type="text" id="jQQ"  class="ui-input" name="qq" placeholder="请输入您的QQ">
+                                            </div>
+                                            <div class="inwhere clearfix">
+                                                <span class="where f-l">所在地</span>
+                                                <div id="areaSelect" class="f-l">
+                                                    <!--<label class="col-md-2 control-label" for="">省市区:</label>-->
+                                                    <select id="province" name="province" class=" form-control" size="1">
+                                                        <option value="0">请选择省</option>
+                                                    </select>
+                                                    <span class="form-control-feedback showError"></span>
+                                                    <select id="city" name="city" class=" form-control" size="1">
+                                                        <option value="0">请选择市</option>
+                                                    </select>
+                                                    <span class="form-control-feedback showError"></span>
+                                                    <select id="county" name="county" class=" form-control" size="1">
+                                                        <option value="0">请选择区</option>
+                                                    </select>
+                                                    <span class="form-control-feedback showError"></span>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <label for="jAddres">详细地址</label>
+                                                <input type="text" id="JAddres" name="address" class="ui-input" placeholder="请输入写详细地址">
+                                            </div>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="javascript:void(0);" class="submit ui-btn ui-btn-danger jMSubBtn">保存</a>
+                                        </div>
+                                    </form>    
+                                </div>
+                                <!-- 页面主内容 end -->
+                            </div>
+                        </div>
+                        <!-- tab内容区域-1 end-->
+                        <!-- tab内容区域-2 start-->
+                        <div class="ifm-tab-container" node-type="container" data-id="2">
+                            <div class="ifm-main-container">
+                                <!-- 页面主内容 start -->
+                                <div class="mod-personinfo">
+                                    <div class="line">
+                                        <span><em>注册时间:</em><i>2016-05-19 16:30:56</i></span>
+                                        <span class="load"><em>登陆次数:</em><i>53</i></span>
+                                        <span><em>上次登陆时间:</em><i>2016-05-19 16:30:56</i></span>
+                                    </div>
+                                    <form id="jFormPwd" autocomplete="off">
+                                        <div class="zpassword clearfix">
+                                            <div class="oldpassword">
+                                                <label for="password">
+                                                    原登录密码
+                                                </label>
+                                                <input type="password" id="password" class="ui-input" name="oldPassword" placeholder="请输入您的原密码">
+                                            </div>
+                                            <div class="newpassword">
+                                                <label>
+                                                    新登录密码
+                                                </label>
+                                                <input type="password" id="nepassword" class="ui-input" name="newPassword" placeholder="请确认您的新密码">
+                                            </div>
+                                            <div class="surepassword">
+                                                <label for="sure">
+                                                    确认新登录密码
+                                                </label>
+                                                <input type="password" id="sure" name="rePassword" class="ui-input" placeholder="请确认您的登录密码">
+                                            </div>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="javascript:void(0);" class="submit ui-btn ui-btn-danger jSubBtn">保存</a>
+                                            <span class="rember"><a href="javascript:void(0);">忘记密码</a></span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- 页面主内容 end -->
+                            </div>
+                        </div>
+                        <!-- tab内容区域-2 end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#include file="./module/uc/right-container.html"-->
+    </div>
+
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/person-info'], function() {});
+    </script>
+</body>
+
+</html>

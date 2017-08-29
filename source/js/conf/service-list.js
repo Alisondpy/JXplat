@@ -35,6 +35,7 @@ define(function(require, exports, module) {
         var loading = null;
 
         pager.on('ajaxStart', function() {
+            $("#indexSearchBar").val($("#courseName").val());
             loading = box.loading('正在加载...', {
                 modal: false
             });

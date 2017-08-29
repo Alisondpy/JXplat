@@ -8,7 +8,6 @@
 @import "../common/slider/slider";
 @import "../common/pager/pager";
 body{
-	background:#f6f6f6;
 	.mt-40{
 		margin-top:40px;
 	}
@@ -45,26 +44,34 @@ body{
 
 		.info-title{
 			p{
+				position:relative;
 				width:288px;
 				height:157px;
-				background:#4ae3ab;
 				color:#fff;
 				box-sizing:border-box;
-				padding:50px 30px;
-				line-height:30px;
 				font-size:20px;
-				&:first-child{
-					background:#4ac4e3;
-				}
+				overflow:hidden;
 				span{
-					display:inline-block;
-					height:60px;
-					text-align:left;
-					overflow:hidden;
-					text-overflow: ellipsis;
-					display: -webkit-box;
-					-webkit-line-clamp: 2;
-					-webkit-box-orient: vertical;
+					display: inline-block;
+					width:100%;
+					height:157px;
+					background:rgba(0,0,0,.5);
+					b{
+						width:100%;
+						margin-top: 45px;
+						box-sizing:border-box;
+						font-weight:normal;
+						padding:0 30px;
+						height:65px;
+						overflow:hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						-webkit-line-clamp: 2;
+						-webkit-box-orient: vertical;
+					}	
+				}
+				img{
+					width:100%;
 				}
 			}
 		}
@@ -72,12 +79,11 @@ body{
 	.mod-sub-info{
 		margin-top:40px;
 		position:relative;
+		border-bottom:1px solid #eaeaea;
 		li{
 			width:90px;
 			height:50px;
 			float:left;
-			margin-right:2px;
-			background:#fff;
 			text-align:center;
 			line-height:50px;
 			font-size:14px;
@@ -252,7 +258,7 @@ body{
 			width:510px;
 			p{
 				font-size:14px;
-				color:#666;
+				color:#67647d;
 				line-height:24px;
 				height:100px;
 				overflow:hidden;
@@ -262,11 +268,28 @@ body{
 			    -webkit-box-orient: vertical;
 			    margin-top: -5px;
 			    margin-bottom:5px;
-			    text-indent: 2em;
+			    font-weight:400;
+			    &:hover{
+			    	color:#3e3e3e;
+			    }
 			}
 			span{
 				font-size:12px;
-				color:#999;
+				color:#333;
+				margin-right:20px;
+				.icon-time{
+					color:#909090;
+					font-weight:bold;
+					font-size:14px;
+					margin-right:5px;
+				}
+				.icon-share{
+					display:inline-block;
+					width:25px;
+					height:16px;
+					background:url(../../images/iconList.png)no-repeat 0 0/13px auto;
+					vertical-align: middle;
+				}
 			}
 		}
 	}

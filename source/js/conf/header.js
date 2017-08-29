@@ -26,9 +26,7 @@ define(function(require, exports, module) {
 
     $("#indexSearch").on("click",function(){
         var keyword = $("#indexSearchBar").val();
-        if(keyword){
-            window.location.href = loadUrl+'?keyWord='+keyword;
-        }
+        window.location.href = loadUrl+'?keyWord='+keyword;
     })
 
     //退出登录跳转链接

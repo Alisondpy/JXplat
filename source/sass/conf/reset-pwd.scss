@@ -7,7 +7,6 @@
 	background:#fff;
 	box-sizing:border-box;
 	padding:40px;
-	border:1px solid #ccc;
 	.item{
 		position:relative;
 	  &.error-red{
@@ -21,7 +20,7 @@
 		.jsVerifyCode{
 			width:100px;
 			border:none;
-			margin-left:6px;
+			margin-left:5px;
 			margin-top:0;
 		}
 		i{

@@ -19,7 +19,6 @@ define(function(require, exports, module) {
                 autoRelease: false,
                 modal: true //是否有遮罩层
             });
-            applyBox.css({"width":"450px"});
         }else{
             box.loadUrl($PAGE_DATA['loginSrc'], {
                 title: '登录',

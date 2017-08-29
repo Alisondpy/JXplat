@@ -19,13 +19,11 @@ define(function(require, exports, module) {
     //图片懒加载
     var lazy = new Lazyload($('.jImg'), {
         loadingClass: 'img-error',
-        mouseWheel: false,
+        mouseWheel: true,
         effect: 'fadeIn',
         snap: true,
-        threshold : 200,
-        event  : "mouseover"
+        skipInvisible: false
     });
-   
 
     //师资团队滚动
     var teacherSwiper_1 = new swiper('#jSwiper_1', {

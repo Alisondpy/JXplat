@@ -12,14 +12,9 @@
     <div class="mod-nav-wrap">
         <div class="wrap clearfix">
             <a href="javascript:;" class="logo f-l"><img src="/images/jx-logo.png"></a>
-            <div class="search f-l" id="jTopSearch">
-                <label class="lbl" for="_topSearchBar" node-type="lbl">请输入搜索内容...</label>
-                <input class="txt" id="_topSearchBar" node-type="ipt" type="text" data-id="key">
-                <button node-type="btn" class="iyoyo icon-search"></button>
-            </div>
-
-            <div class="login-box f-l" id="jLoginStatus">
-                <ul class="tologin clearfix" node-type="tologin" >
+            
+            <div class="login-box f-r" id="jLoginStatus">
+                 <ul class="tologin clearfix" node-type="tologin" >
                     <li class="item mod-login f-l">
                         <a href="javascript:;" class="Jlogin"><i class="iyoyo icon-login"></i>登录</a>
                     </li>
@@ -28,9 +23,9 @@
                     </li>
                 </ul>
                 <!-- 这里只是模板，后台同学请把这段直接干掉 登录信息ajax获取 start-->
-                <ul class="logined clearfix" node-type="logined" style="display:none">
+               <!-- <ul class="logined clearfix" node-type="logined" >
                     <li class="item clearfix">
-                        <a href="javascript:;" class="user-info f-l"><img src="/images/default-img.jpg"></a>
+                        <a href="javascript:;" class="user-info f-l"><img src="/images/tiezhu.jpg"></a>
                         <a href="javascript:;" class="user-name txt-overflow f-l" node-type="userName">南京市最高法院</a>
                         <i class="iyoyo icon-top-sign"></i><b></b>
                         <i class="iyoyo icon-down-sign"></i><b></b>
@@ -40,35 +35,42 @@
                         <a href="JavaScript:;" class="has-news"><span>系统消息</span></a>
                         <a href="JavaScript:;" >退出</a>
                     </li>
-                </ul>
+                </ul>-->
                 <!-- 这里只是模板，后台同学请把这段直接干掉 登录信息ajax获取 end-->
             </div>
+
         </div>
     </div>
 
     <div class="mod-nav">
-    	<ul class="nav wrap clearfix">
-    		<li class="item active">
-    			<a href="">首页</a>
-    		</li>
-    		<li class="item">
-    			<a href="">资讯动态</a>
-    		</li>
-    		<li class="item">
-    			<a href="">电商政策</a>
-    		</li>
-    		<li class="item">
-    			<a href="">线上学习</a>
-    		</li>
-    		<li class="item">
-    			<a href="">创客服务</a>
-    		</li>
-    		<li class="item">
-    			<a href="">双创活动</a>
-    		</li>
-    		<li class="item">
-    			<a href="">园区组织</a>
-    		</li>
-    	</ul>
+        <div class="wrap clearfix">
+            <ul class="nav clearfix f-l">
+                <li class="item active">
+                    <a href="">首页</a><span class="bg"></span>
+                </li>
+                <li class="item">
+                    <a href="">资讯动态</a><span class="bg"></span>
+                </li>
+                <li class="item">
+                    <a href="">电商政策</a><span class="bg"></span>
+                </li>
+                <li class="item">
+                    <a href="">线上学习</a><span class="bg"></span>
+                </li>
+                <li class="item">
+                    <a href="">创客服务</a><span class="bg"></span>
+                </li>
+                <li class="item">
+                    <a href="">双创活动</a><span class="bg"></span>
+                </li>
+                <li class="item">
+                    <a href="">园区组织</a><span class="bg"></span>
+                </li>
+            </ul>
+            <div class="search f-r" id="jTopSearch">
+                <input class="txt" id="_topSearchBar" node-type="ipt" type="text" data-id="key" placeholder="请输入搜索内容...">
+                <button node-type="btn" class="iyoyo icon-search"></button>
+            </div>
+        </div>
     </div>
 </div>

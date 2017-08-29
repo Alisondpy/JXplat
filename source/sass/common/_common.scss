@@ -52,7 +52,6 @@ body {
 }
 
 a:hover {
-    color: #ff5d66;
     text-decoration: none;
 }
 
@@ -99,6 +98,7 @@ a {
     margin: 0 auto;
 }
 
+.ui-empty-list{margin-top:30px;}
 .clearfix:after {
     content: ".";
     display: block;

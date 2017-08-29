@@ -1,7 +1,7 @@
 var path = require('path');
 
 var PROJECT_NAME = 'JXplat';
-var STATIC_SERVER = 's1.zzhstatic.com';
+var STATIC_SERVER = 's2.zzhstatic.com';
 var CDN = '//' + STATIC_SERVER + '/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';
 var PATH_DIST = 'dist';

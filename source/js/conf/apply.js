@@ -9,32 +9,25 @@ define(function(require, exports, module) {
     var form = require('lib/core/1.0.0/utils/form');
     var jMSubBtn = $("#jMSubBtn");
      var domId = $PAGE_DATA['domId'];
-    var loadUrl = $PAGE_DATA['loadUrl'];//请求路径
     var submitUrl = $PAGE_DATA['submitUrl'];//请求路径
-     new templateRender(domId,{
-            url:loadUrl,
-            temId:'jWrap',
-            activityId:$("#activityId").val()
-        })
-        setTimeOut(function(){
-             $.loadAreaSelect("area");
              var defaultForm = {};
              $("#jSigninForm").find("input").each(function(){
                 var _this = $(this);
-                if(_this.parent().find(".necessary")){
+                if(_this.parent().find(".necessary").length>0){
                     var key = _this.attr("name");
-                    var rules = {reuqire:true};
+                    var rules = {required:true};
                     if(key == "mobile"){
                         rules[key] = true;
                     }
                     defaultForm[key] = rules;
                 }
-                console.log(defaultForm);
              })
+                console.log(defaultForm);
             var handshake = {
                 handle:function () {
-                    var ucData = form.serializeForm('#jSigninForm');
                     $("#region").val($("#province option:selected").text()+$("#city option:selected").text()+$("#county option:selected").text());
+                    var ucData = form.serializeForm('#jSigninForm');
+                    console.log(ucData);
                     var activityId = $("#activityId").val();
                     io.post($PAGE_DATA['submitUrl'], $.extend({activityId:$("#activityId").val()},ucData) ,function(data){
                         box.ok('恭喜您，报名成功！');
@@ -54,22 +47,7 @@ define(function(require, exports, module) {
                 }
             })
             $('#jSigninForm').validate({
-                rules: {
-                    realname: {
-                        required: true,
-                        realname:true
-                    },
-                    mobile:{
-                        required: true,
-                        mobile:true
-                    },
-                    school:{
-                        required: true
-                    },
-                    job:{
-                        required:true
-                    }
-                },
+                rules:defaultForm ,
                 messages:{
                     realname: {
                         required: "请输入姓名"
@@ -93,7 +71,6 @@ define(function(require, exports, module) {
                 }
             });
 
-        },500)
     
     //加载省市区三级联动
 
@@ -105,7 +82,7 @@ define(function(require, exports, module) {
             var provinceName = province.attr("name");
             var provinceMap = loadArea($PAGE_DATA['location']);
             province.empty();
-            province.append("<option value='0'>请选择省</option>");
+            province.append("<option value=''>请选择省</option>");
             if (provinceMap != null) {
                 $.each(provinceMap, function(i, n) {
                     province.append("<option value='" + n.id + "'>" + n.name + "</option>");
@@ -117,7 +94,7 @@ define(function(require, exports, module) {
                     var city = element.find("select").eq(1);
                     var cityName = city.attr("name");
                     city.empty();
-                    city.append("<option value='0'>请选择市</option>");
+                    city.append("<option value=''>请选择市</option>");
                     var cityMap = loadArea($PAGE_DATA['location'] + provinceValue);
                     if (cityMap != 0) {
                         $.each(cityMap, function(i, n) {
@@ -131,7 +108,7 @@ define(function(require, exports, module) {
                             var countyValue = $("input[name='" + countyName + "_hide']").val();
                             var countyMap = loadArea($PAGE_DATA['location'] + cityValue);
                             county.empty();
-                            county.append("<option value='0'>请选择县/区</option>");
+                            county.append("<option value=''>请选择县/区</option>");
                             if (countyMap != null) {
                                 $.each(countyMap, function(i, n) {
                                     county.append("<option value='" + n.id + "'>" + n.name + "</option>");
@@ -151,11 +128,11 @@ define(function(require, exports, module) {
                     switch (i) {
                         case 1:
                             $(this).empty();
-                            $(this).append("<option value='0'>请选择市</option>");
+                            $(this).append("<option value=''>请选择市</option>");
                             break;
                         case 2:
                             $(this).empty();
-                            $(this).append("<option value='0'>请选择区/县</option>");
+                            $(this).append("<option value=''>请选择区/县</option>");
                             break;
                     }
                 });
@@ -176,7 +153,7 @@ define(function(require, exports, module) {
                 province.val(province_val);
                 var city_change_Map = loadArea($PAGE_DATA['location'] + province_val);
                 city.empty();
-                city.append("<option value='0'>请选择市</option>");
+                city.append("<option value=''>请选择市</option>");
                 if (city_change_Map != 0) {
                     $.each(city_change_Map, function(i, n) {
                         city.append("<option value='" + n.id + "'>" + n.name + "</option>");
@@ -187,7 +164,7 @@ define(function(require, exports, module) {
                 var city_change = $(this).val();
                 var county_change_Map = loadArea($PAGE_DATA['location'] + city_change);
                 county.empty();
-                county.append("<option value='0'>请选择县/区</option>");
+                county.append("<option value=''>请选择县/区</option>");
                 if (county_change_Map != null) {
                     $.each(county_change_Map, function(i, n) {
                         county.append("<option value='" + n.id + "'>" + n.name + "</option>");
@@ -201,7 +178,7 @@ define(function(require, exports, module) {
                 city.val(city_val);
                 var countyMap = loadArea($PAGE_DATA['location'] + city_val);
                 county.empty();
-                county.append("<option value='0'>请选择县/区</option>");
+                county.append("<option value=''>请选择县/区</option>");
                 if (countyMap != null) {
                     $.each(countyMap, function(i, n) {
                         county.append("<option value='" + n.id + "'>" + n.name + "</option>");
@@ -224,11 +201,11 @@ define(function(require, exports, module) {
             type: 'POST',
             async: false,
             success: function (data) {
-                areaMap = data.regionInfoList;
+                areaMap = data.data.resultList;
             }
         });
         return areaMap;
     }
 
-   
+     $.loadAreaSelect("area");
 });

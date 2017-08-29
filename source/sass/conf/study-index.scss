@@ -7,6 +7,7 @@
 @import "../common/mod-policy";
 @import "../common/mod-study";
 @import "../common/slider/slider";
+@import "../common/pager/pager";
 .course-wrap{
 	margin-top:40px;
 	.mod-class {
@@ -246,7 +247,7 @@
         	.play-icon{
         		width:70px;
         		height:70px;
-        		line-height:70px;
+        		line-height:76px;
         		top:40px;
         		margin-left:-35px;
         		i{
@@ -266,6 +267,7 @@
 		margin: 20px 0 40px;
 		img{
 			height:100%;
+			width:100%;
 		}
 	}
 

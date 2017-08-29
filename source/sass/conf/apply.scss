@@ -8,7 +8,8 @@ body{
 html, body {
     background-color: #e4ebf0;
 }
-
+#city-error{left:200px;}//城市选择错误提示
+#county-error{left:300px;}//城市选择错误提示
 .mod-form {
     width: 450px;
     border: 1px solid #fff;
@@ -20,12 +21,10 @@ html, body {
             position: relative;
             height: 65px;
             .ui-input {
-                position: absolute;
-                right: 0;
                 display: inline-block;
                 width: 288px;
-                padding: 0 10px;
-                height:40px;
+                padding: 0 5px;
+                height:35px;
                 box-sizing:border-box;
                 border-radius: 4px;
                 &[readonly="readonly"]{
@@ -36,8 +35,10 @@ html, body {
                 }
             }
             .mark {
-                position: absolute;
-                right: 300px;
+                display:inline-block;
+                width:85px;
+                text-align:right;
+                margin-right:15px;
                 line-height: 38px;
             }
             label.error{
