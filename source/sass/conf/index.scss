@@ -8,6 +8,7 @@
 @import "../common/mod-policy";
 @import "../common/slider/slider";
 .mb-20{margin-bottom:20px;}
+.mb-40{margin-bottom:40px;}
 .mt-50{margin-top:50px;}
 .mod-slider{
 	position:relative;
@@ -81,28 +82,53 @@
 	}
 }
 body{
+	.mod-more{
+		font-size:14px;
+		color:#b9b9b9;
+		text-align:center;
+		line-height:24px;
+		border-bottom:1px solid #ededed;
+		margin-bottom: 30px;
+		cursor:pointer;
+		&:hover{
+			color:#fe5654;
+		}
+	}
 	background:#fff;
 		.mod-level-header{
+			cursor:pointer;
 			font-size:24px;
 			color:#2c363d;
 			margin-bottom:20px;
 			font-weight:normal;
 			padding-bottom:18px;
 		    border-bottom: 1px solid #ededed;
+			&:hover{
+				i{
+					background:#ee9795;
+					color:#fff;
+				}
+				span{
+					color:#fc4947;
+				}
+			}
 			i{
 				display:inline-block;
-			  	font-size:14px;
+			  	font-size:13px;
 			  	color:#87949e;
 				width:30px;
 				text-align:center;
-				line-height:30px;
 				height:30px;
+				line-height:30px;
 				border-radius:50%;
 				background:rgba(135,148,158,.15);
 				margin-right:10px;
 				vertical-align:middle;
+				&.icon-dongtaizixun{
+					line-height:33px;
+				}
 				&.icon-shuju,&.icon-xuexi,&.icon-huodong1{
-					font-size:18px;
+					font-size:16px;
 				}
 				&.icon-wenzhuanjia{
 					font-size:23px;
@@ -121,18 +147,6 @@ body{
 		
 
 		.mod-views{
-			.mod-more{
-						font-size:14px;
-						color:#b9b9b9;
-						text-align:center;
-						line-height:24px;
-						border-bottom:1px solid #ededed;
-					    margin-bottom: 30px;
-					    cursor:pointer;
-					    &:hover{
-					    	color:#fe5654;
-					    }
-					}
 			li{
 				margin-top:15px;
 				padding-bottom:15px;
@@ -445,6 +459,12 @@ body{
 					cursor:pointer;
 					&.active{
 						border-bottom:2px solid #fc4947;
+						i{
+							color:#fc4947
+						}
+						span{
+							background:#fc4947;
+						}
 						&:after{
 							display:block;
 						}
@@ -466,11 +486,32 @@ body{
 						display:block;
 						font-size:36px;
 						color:#b9b9b9;
+						height:54px;
+						&.icon-lives{
+							font-size:34px;
+						}
+						&.icon-dianbo{
+							font-size:37px;
+						}
+						&.icon-guwen{
+							height:60px;
+							font-size:43px;
+							margin-top:-6px;
+						}
+						&.icon-zhuanjia{
+							font-size:32px;
+							padding-top:3px;
+							height:51px;
+						}
+						&.icon-gwManage{
+							height:52px;
+							padding-top:2px;
+						}
 					}
 					span{
 						text-align:center;
 						line-height:20px;
-						background:#fc4947;
+						background:#9ea6a8;
 						color:#fff;
 						font-size:14px;
 						padding:1px 10px;
@@ -479,6 +520,7 @@ body{
 			}
 			.mod-activity{
 				.acti-list{
+					margin-top:45px;
 					li{
 						border-left:1px solid #dee1e5;
 						line-height:1;
@@ -513,12 +555,12 @@ body{
 		width:100%;
 		background-color: #fff;
 		.mod-activitys{
-			width:840px;
+			width:790px;
 			.school{
 				a{
 					position: relative;
-				    width: 195px;
-				    height: 113px;
+				    width: 190px;
+				    height: 108px;
 				    vertical-align: middle;
 				    img {
 					    width: 100%;
@@ -540,23 +582,23 @@ body{
 				}
 			}
 			.role-left {
-			    width: 410px;
+			    width:395px;
 			    height: 369px;
 			    .trendnew {
 			    	display:inline-block;
-				    width: 410px;
-				    height: 240px;
+				    width: 395px;
+				    height: 230px;
 				    margin-bottom: 15px;
 				}
 			}
 			.role-middle {
-			    width: 430px;
+			    width: 395px;
 			    a {
 				    position: relative;
-				    width: 195px;
-				    height: 113px;
-				    margin-left: 20px;
-				    margin-bottom: 15px;
+				    width: 190px;
+				    height: 108px;
+				    margin-left: 7px;
+				    margin-bottom: 14px;
 				}
 				img {
 				    width: 100%;
@@ -575,11 +617,13 @@ body{
 				}
 			}
 		}
+		.mod-calendar{
+			width:395px;
+		}
 	}
 }
 .Ad-position{
 	width:790px;
-	height:100px;
 	overflow:hidden;
 	text-align:center;
 	line-height:100px;
@@ -590,7 +634,6 @@ body{
 }
 .Ad-position-sm{
 	width:390px;
-	height:100px;
 	text-align:center;
 	line-height:100px;
 	img{
