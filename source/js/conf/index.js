@@ -79,6 +79,19 @@ define(function(require, exports, module) {
             }
         }
     })
+    //配套服务切换
+    $(".jService").on("click","li",function(){
+        var _this = $(this);
+        var code = _this.attr("data-val");
+        _this.addClass("active").siblings().removeClass("active");
+        new templateRender(productDomId,{
+            url:productUrl+"?code="+code,
+            temId:'jVendorWrap'
+        })
+    })
+
+
+
     $(".jExpertTab").on("click","li",function(){
          var _this = $(this);
             _this.addClass("active").siblings().removeClass("active");
