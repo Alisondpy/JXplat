@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动列表页</title>
+    <link rel="stylesheet" href="/css2/conf/activity-demo.css">
+    <script>
+      var $PAGE_DATA=window.$PAGE_DATA||{startTime:new Date};
+    </script>
+</head>
+<body>
+<div class="year-choice">
+    <span class="nextYear up disabled"></span>
+    <ul class="yearWrap">
+        <li>2017</li>gitgit
+        <li>2016</li>
+        <li>2015</li>
+        <li>2014</li>
+    </ul>
+    <span class="lastYear down"></span>
+</div>
+<script src="/lib/require/2.1/require.js" crossorigin="*" data-cdn="lib/require/2.1/require.js"></script>
+<script src="/js2/app.js" crossorigin="*" data-cdn="app.js"></script><!-- require.js的配置 -->
+<script type="text/javascript">
+  require(['conf/index'], function() {
+    var index = 0;
+    var height = $("li").innerHeight();
+    var length = $(".yearWrap li").length;
+    $(".year-choice").on("click","span",function(){
+      var _this  = $(this);
+      if(_this.hasClass("up") && !_this.hasClass("disabled")){
+        index --;
+        $(".down").removeClass("disabled");
+        if(index >=0){
+          $(".yearWrap").css("top",-index*height+'px')
+        }
+        if(index == 0){
+          _this.addClass("disabled");
+        }
+
+      }
+      if(_this.hasClass("down") && !_this.hasClass("disabled")){
+        index ++;
+        $(".up").removeClass("disabled");
+        if(index < length){
+          $(".yearWrap").css("top",-index*height+'px')
+        }
+        if(index == length - 1){
+          _this.addClass("disabled");
+        }
+      }
+    })
+
+  });
+
+
+
+</script>
+</body>
+</html>
