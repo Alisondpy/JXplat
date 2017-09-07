@@ -4,7 +4,8 @@
   "description": "null",
   "main": "app.js",
   "dependencies": {
-    "gulp-requirejs-optimize": "^1.2.0"
+    "gulp-requirejs-optimize": "^1.2.0",
+    "phantomjs-prebuilt": "^2.1.14"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
@@ -12,7 +13,7 @@
     "cssgrace": "^3.0.0",
     "cssnext": "^1.8.4",
     "del": "^2.2.2",
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-buffer": "0.0.2",
     "gulp-clean-css": "^2.0.13",

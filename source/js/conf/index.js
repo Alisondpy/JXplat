@@ -24,7 +24,6 @@ define(function(require, exports, module) {
     var courseLiveUrl = $PAGE_DATA['courseLiveUrl'];
     var courseDomId = $PAGE_DATA['courseDomId'];
 
-
     require('plugins/calender');
 
 

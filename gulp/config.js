@@ -1,7 +1,6 @@
 var path = require('path');
-
 var PROJECT_NAME = 'JXplat';
-var STATIC_SERVER = 's2.zzhstatic.com';
+var STATIC_SERVER = 's2.zhongzhihui.com:8080';
 var CDN = '//' + STATIC_SERVER + '/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';
 var PATH_DIST = 'dist';
@@ -11,7 +10,6 @@ var APP_NAME = 'app';
 
 var CONFIG = {
     appName: APP_NAME + '.js',
-    cdn: CDN,
     dist: './' + PATH_DIST,
     revHash: true, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
     images: {
@@ -49,13 +47,13 @@ var CONFIG = {
     revCollector: {
         replaceReved: true,
         dirReplacements: {
-            '/css': function(manifestValue) {
-                return CDN + PATH_DIST + '/css/' + getManifestValueByRevHash(manifestValue);
+            '/css2': function(manifestValue) {
+                return  CDN + PATH_DIST +'/css/' + getManifestValueByRevHash(manifestValue);
             },
-            '/js': function(manifestValue) {
+            '/js2': function(manifestValue) {
                 return CDN + PATH_DIST + '/js/' + getManifestValueByRevHash(manifestValue);
             },
-            '/images': function(manifestValue) {
+            '/images2': function(manifestValue) {
                 return CDN + PATH_DIST + '/images/' + getManifestValueByRevHash(manifestValue);
                 // return '//s' + (Math.floor(Math.random() * 4) + 1) + '.zzhstatic.com' + '/example-project/'+PATH_DIST+'/images/' + getManifestValueByRevHash(manifestValue);
             }
