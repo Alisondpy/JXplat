@@ -10,6 +10,24 @@
 .mb-20{margin-bottom:20px;}
 .mb-40{margin-bottom:40px;}
 .mt-50{margin-top:50px;}
+.back-grad-1{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ae26de), to(#e52bb8));
+}
+.back-grad-2{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3566ff), to(#1dc2ff));
+}
+.back-grad-3{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2b2b4e), to(#2b2b4e));
+}
+.back-grad-4{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#20a9df), to(#16d8e4));
+}
+.back-grad-5{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#459eab), to(#7ddbc7));
+}
+.back-grad-6{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e01830), to(#ed187e));
+}
 .mod-slider{
 	position:relative;
 	overflow:hidden;
@@ -84,14 +102,16 @@
 body{
 	.policy-web{
 		.policy-left{
-			background:#ccc;
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#18eea4), to(#1fde47));
 			width:282px;
+			color:#fff;
 			height:165px;
 			margin-right:1px;
 			box-sizing:border-box;
 			padding:60px 40px 50px;
-			span{
+			a{
 				text-align:center;
+				color:#fff;
 				display: -webkit-box;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
@@ -106,15 +126,16 @@ body{
 			width:625px;
 			.pos-static{
 				float:left;
+				color:#fff;
 				width:130px;
 				height:78px;
 				margin-left:8px;
 				margin-bottom:9px;
-				background:#eee;
 				box-sizing:border-box;
 				padding:25px;
-				span{
+				a{
 					text-align:center;
+					color:#fff;
 					display: -webkit-box;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 2;
@@ -171,6 +192,10 @@ body{
 				vertical-align:middle;
 				&.icon-dongtaizixun{
 					line-height:33px;
+				}
+				&.icon-zhengfu{
+					font-size:16px;
+					font-weight:100;
 				}
 				&.icon-shuju,&.icon-xuexi,&.icon-huodong1{
 					font-size:16px;
@@ -490,7 +515,11 @@ body{
 	}
 
 	.mod-right-bar{
-			width:380px;
+		width:380px;
+		.mod-service{
+			padding-bottom:20px;
+			border-bottom:1px solid #ededed;
+		}
 			.mod-study-tab{
 				margin-left:20px;
 				margin-top:-10px;
