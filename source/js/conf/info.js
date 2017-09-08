@@ -132,4 +132,16 @@ define(function(require, exports, module) {
         }
     })
 
+  // 图表切换
+$(".mod-tag").on("click","span",function(){
+    var _this  = $(this),chartIndex = _this.index();
+    _this.addClass("active").siblings().removeClass("active");
+    $.ajax({
+      url:"?code="+chartIndex,
+      type:'get',
+    }).done(function(resp){
+
+    })
+})
+
 });

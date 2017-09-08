@@ -29,6 +29,18 @@ define(function(require, exports, module) {
         window.location.href = loadUrl+'?keyWord='+keyword;
     })
 
+    // 顶部显示时间
+    function getTime(){
+        var dateTime = new Date();
+        var year = dateTime.getFullYear();
+        var month = dateTime.getMonth() + 1;
+        var day = dateTime.getDate();
+        var date = dateTime.getDay()
+        var week = ["日","一","二","三","四","五","六"];
+        var dateString = year+"年"+month+"月"+day+"日/星期"+week[date];
+        return dateString;
+    }
+    $(".jTime").text(getTime());
     //退出登录跳转链接
     $('#logoutBtn').click(function(){
         var currentUrl = window.location.pathname +""+ window.location.search;

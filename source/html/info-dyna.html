@@ -4,10 +4,9 @@
     <title>资讯动态</title>
     <!--#include file="./common/meta.html"-->
     <!--#include file="./common/css.html"-->
-    <link rel="stylesheet" href="/css/conf/info.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/css2/conf/info.css" type="text/css" charset="utf-8">
     <script type="text/javascript">
-        // 登录页面的路径
-        $PAGE_DATA['applyUrl']=""
+      var $PAGE_DATA=window.$PAGE_DATA||{startTime:new Date};
     </script>
 </head>
 
@@ -101,42 +100,43 @@
         </div>
         <!-- 右侧广告栏 -->
         <div class="mod-right f-r">
-        <!-- <div class="latest-announce">
-            <span><i class="icon-horn"></i>5月相约云南红河 倾听大咖探讨如何推进农村电商“化茧成蝶”！</span>
-            <b>最新公告</b>
-        </div> -->
+             <div class="latest-announce clearfix">
+                <div class="mod-news clearfix"><i class="iyoyo icon-xiaolaba f-l"></i><span class="f-l">5月相约云南红河 倾听大咖探讨如何推进农村电商“化茧成蝶”！</span></div>
+                <b>最新公告</b>
+             </div>
 
-        <!-- 国家政策 -->
-            <div class="mod-policy">
-                <h2 class="mod-common-title">国家政策</h2>
-                 <!--#include file="./common/mod-policy.html"-->
-            </div>
-            <!-- 地方政策 -->
-            <div class="mod-policy">
-                <h2 class="mod-common-title">地方政策</h2>
-                 <!--#include file="./common/mod-policy.html"-->
+            <div class="mod-chart">
+                <h2>网络零售发展指数</h2>
+                <div class="mod-tag" ><span class="active">总指数</span><span>企业成长指数</span><span>渗透指数</span><span>环境指数</span></div>
+                <div class="chart-detail">
+                    <a href="javascript:;"><img src=""  data-src="" class="jImg" alt=""></a>
+                    <p>网络零售发展走势：2017年2季度全国网络零售发展指数为130.67，同比增长6.35%，环比增长3.09%。网络零售整体发展呈季节性回暖。</p>
+                </div>
             </div>
 
-            <!-- 双创活动 -->
-            <div class="mod-activity mt-40">
-                <h2 class="mod-common-title">双创活动</h2>
-            <!--#include file="./common/mod-activity.html"-->
-            </div>
-            <!-- 线上学习 -->
-            <div class="mod-course">
-                <h2 class="mod-common-title ml-20">线上学习</h2>
-                <!--#include file="./common/mod-study.html"-->
-            </div>
-            <!-- 园区组织 -->
-            <div class="mod-organize">
-                <h2 class="mod-common-title ml-20">园区组织</h2>
-                <!--#include file="./common/mod-orgnize.html"-->
+            <div class="mod-labels">
+                <h2>电商百科</h2>
+                <div>
+                    <a href="javascript:;"><span class="col-2dbcf1">电子商务</span></a>
+                    <a href="javascript:;"><span class="width-120 col-feb418">防火墙</span></a>
+                    <a href="javascript:;"><span class="width-145 col-2dbcf1">全球电子商务</span></a>
+                    <a href="javascript:;"><span class="width-200 col-97d21b">网络营销的沟通策略</span></a>
+                    <a href="javascript:;"><span class="width-180 col-ff914e">比较购物代理</span></a>
+                    <a href="javascript:;"><span class="width-125 col-c5c41a">通信软件</span></a>
+                    <a href="javascript:;"><span class="width-150 col-6edfa7">不完全电子商务</span></a>
+                    <a href="javascript:;"><span class="width-105 col-c5c41a">物流</span></a>
+                    <a href="javascript:;"><span class="width-130 col-98d21b">定价策略</span></a>
+                    <a href="javascript:;"><span class="width-145 col-a99cea">本地电子商务</span></a>
+                    <a href="javascript:;"><span class="width-105 col-d3d3d3">更多...</span></a>
+                </div>
             </div>
         </div>
     </div>
 
     <!--#include file="./common/footer.html"-->
     <!--#include file="./common/js.html"-->
+    <script src="/lib/require/2.1/require.js" crossorigin="*" data-cdn="lib/require/2.1/require.js"></script>
+    <script src="/js2/app.js" crossorigin="*" data-cdn="app.js"></script><!-- require.js的配置 -->
     <script type="text/javascript">
     require(['conf/info'], function() {
     });

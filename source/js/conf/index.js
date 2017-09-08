@@ -25,8 +25,6 @@ define(function(require, exports, module) {
     var courseDomId = $PAGE_DATA['courseDomId'];
 
     require('plugins/calender');
-
-
     //首页服务产品模块加载
     var productUrl = $PAGE_DATA['productUrl'];
     var productDomId =  $PAGE_DATA['productDomId'];
@@ -78,10 +76,18 @@ define(function(require, exports, module) {
             }
         }
     })
+//配套服务初始化
+    var codeInit = $(".jService li").eq(0).attr("data-val")
+    console.log(codeInit)
+    new templateRender(productDomId,{
+        url:productUrl+"?code="+codeInit,
+        temId:'jVendorWrap'
+    })
     //配套服务切换
     $(".jService").on("click","li",function(){
         var _this = $(this);
         var code = _this.attr("data-val");
+        console.log(code)
         _this.addClass("active").siblings().removeClass("active");
         new templateRender(productDomId,{
             url:productUrl+"?code="+code,
@@ -121,12 +127,7 @@ define(function(require, exports, module) {
         url:courseLiveUrl,
         temId:'jCourseWrap'
     }) 
-    
 
-    new templateRender(productDomId,{
-        url:productUrl,
-        temId:'jVendorWrap'
-    })
 
      var lazy = new Lazyload($('.jImg'), {
         loadingClass: 'img-error',
@@ -141,6 +142,8 @@ $(".hot-news").on("mouseover","li",function(){
     var _this = $(this);
     _this.addClass("active").siblings().removeClass("active");
 })
+
+
 })
 
 

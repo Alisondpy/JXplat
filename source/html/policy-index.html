@@ -5,10 +5,9 @@
     <title>电商政策</title>
     <!--#include file="./common/meta.html"-->
     <!--#include file="./common/css.html"-->
-    <link rel="stylesheet" href="/css/conf/policy.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/css2/conf/policy.css" type="text/css" charset="utf-8">
     <script type="text/javascript">
-        // 登录页面的路径
-        $PAGE_DATA['applyUrl']=""
+      var $PAGE_DATA=window.$PAGE_DATA||{startTime:new Date};
     </script>
 </head>
 
@@ -19,8 +18,10 @@
         <div class="mod-container f-l">
             <div class="mod-sub-info clearfix">
                 <div  id="categoryIds" class="mod-area clearfix f-l">
+                    <span>全部</span>
                     <span>国家政策</span>
                     <span>地方政策</span>
+                    <span>本省政策</span>
                 </div>
                <div class="search f-r" id="jTopSearch">
                     <input class="txt" id="_topSearchBar" node-type="ipt" type="text" data-id="name" value="" placeholder="请输入搜索内容..." />
@@ -64,21 +65,36 @@
         </div>
         <!-- 右侧广告栏 -->
         <div class="mod-right f-r">
-        <!-- 电商活动 -->
-            <div class="mod-policy">
-                <h2 class="mod-common-title">地方政策</h2>
-                 <!--#include file="./common/mod-policy.html"-->
-            </div>
-            <!-- 双创活动 -->
-            <div class="mod-activity mt-40">
-                <h2 class="mod-common-title ml-20">双创活动</h2>
-                <!--#include file="./common/mod-activity.html"-->
+        <!-- 电子商务促进活动 -->
+            <h2 class="mod-level-header"><i class="iyoyo icon-rocket"></i><span>电子商务促进机构</span></h2>
+            <div class="activity-list">
+                <ul>
+                    <li class="clearfix">
+                        <span class="f-l">国务院</span>
+                        <a href="javascript:;" class="activity-title f-r">外卖订餐平台首推盲抽检测 不合格商家将被平台下线</a>
+                    </li>
+                    <li class="clearfix">
+                        <span class="f-l">国务院</span>
+                        <a href="javascript:;" class="activity-title f-r">外卖订餐平台首推盲抽检测 不合格商家将被平台下线</a>
+                    </li>
+                    <li class="clearfix">
+                        <span class="f-l">国务院</span>
+                        <a href="javascript:;" class="activity-title f-r">外卖订餐平台首推盲抽检测 不合格商家将被平台下线</a>
+                    </li>
+                    <li class="clearfix">
+                        <span class="f-l">国务院</span>
+                        <a href="javascript:;" class="activity-title f-r">外卖订餐平台首推盲抽检测 不合格商家将被平台下线</a>
+                    </li>
+                </ul>
+                <p class="more-btn">查看更多>></p>
             </div>
         </div>
     </div>
 
     <!--#include file="./common/footer.html"-->
     <!--#include file="./common/js.html"-->
+    <script src="/lib/require/2.1/require.js" crossorigin="*" data-cdn="lib/require/2.1/require.js"></script>
+    <script src="/js2/app.js" crossorigin="*" data-cdn="app.js"></script><!-- require.js的配置 -->
     <script type="text/javascript">
     require(['conf/policy-index'], function() {
     });
@@ -89,7 +105,7 @@
     <li>
          <a href="javascript:;" class="info-title">{value.title}}</a>
             <div class="clearfix">
-                 <a href="javascript:;" class="img-wrap"><img src="//s1.zhongzhihui.com/lib/assets/images/s.gif" data-src="{{value.resourceUrl}}" class="jImg"/></a>
+                 <a href="javascript:;" class="img-wrap"><img src="//s1.zhongzhihui.com/lib/assets/images2/s.gif" data-src="{{value.resourceUrl}}" class="jImg"/></a>
                 <div class="f-r mod-info-detail">
                     <p>{value.text}</p>
                     <span>{value.time}</span>

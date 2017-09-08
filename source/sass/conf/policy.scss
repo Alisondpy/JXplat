@@ -1,14 +1,9 @@
 @charset "UTF-8";
 @import "../common/config/level-1";
 @import "../common/common";
-@import "../common/mod-policy";
-@import "../common/mod-activity";
-@import "../common/mod-study";
-@import "../common/mod-orgnize";
-@import "../common/slider/slider";
 @import "../common/pager/pager";
 body{
-	background:#f6f6f6;
+	background:#fff;
 	.mt-40{
 		margin-top:40px;
 	}
@@ -95,7 +90,7 @@ body{
 			width:300px;
 			height:40px;
 			border-radius:50px;
-			background:#fff;
+			border: 1px solid #eee;
 			margin-top:6px;
 			.txt{
 				width: 100%;
@@ -130,7 +125,7 @@ body{
 	.info-list{
 		margin-top:2px;
 		padding:10px 30px;
-		background:#fff;
+		background:#fdfdfd;
 		li{
 			padding:17px 0;
 			border-top:1px solid #f6f6f6;
@@ -192,10 +187,86 @@ body{
 .mod-right {
 	width:380px;
 	margin-top:40px;
-	.mod-common-title{
-		font-size:24px;
-		color:#576671;
-		font-weight:normal;
-		margin-bottom:20px;
+	.mod-level-header{
+		cursor: pointer;
+		font-size: 24px;
+		color: #2c363d;
+		margin-bottom: 20px;
+		font-weight: normal;
+		padding-bottom: 18px;
+		border-bottom: 1px solid #ededed;
+		i{
+			display: inline-block;
+			font-size: 16px;
+			color: #87949e;
+			width: 30px;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 50%;
+			background: rgba(135, 148, 158, 0.15);
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		span{
+			vertical-align: middle;
+		}
+		}
+	li{
+			margin-top:28px;
+			&:hover{
+				span{
+					background-color:#fe5654;
+					&:after{
+						border-color:transparent transparent transparent #fe5654;
+					}
+				}
+				a{
+					color:#fe5654;
+				}
+			}
+			span{
+				vertical-align: middle;
+				position:relative;
+				margin-left:5px;
+				margin-top:4px;
+				width:50px;
+				height:20px;
+				background:#a0a0a0;
+				color:#fff;
+				text-align:center;
+				line-height:20px;
+				&:after{
+					content:'';
+					position:absolute;
+					width:0;
+					height:0;
+					border-width:5px;
+					border-style:solid;
+					right:-10px;
+					top:4px;
+					border-color:transparent transparent transparent #a0a0a0;
+				}
+			}
+			a{
+				width:300px;
+				height:45px;
+				line-height:24px;
+				font-size:16px;
+				color:#2c363e;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+
+			}
+		}
+	.more-btn{
+		text-align:center;
+		line-height:24px;
+		border-top:1px solid #ededed;
+		border-bottom: 1px solid #ededed;
+		color:#b9b9b9;
+		margin-top:25px;
 	}
-}
+	}
